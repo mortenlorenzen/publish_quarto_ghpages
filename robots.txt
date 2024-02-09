@@ -1,0 +1,1 @@
+Sitemap: https://mortenlorenzen.github.io/publish_quarto_ghpages/sitemap.xml
