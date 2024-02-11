@@ -15,6 +15,8 @@ This is a Quarto website and was rendered on GitHub `{r} Sys.time()`.
 library(googlesheets4)
 library(gt)
 
+googlesheets4::gs4_deauth()
+
 spreadsheet_url <- "https://docs.google.com/spreadsheets/d/1dnzTx2TIxk-QpoWNz08Jr_e4F2rZ4mDBgphzq9lwdYM/edit?usp=drive_link"
 
 data <- googlesheets4::read_sheet(spreadsheet_url, range = "Ark1!A1:D5")
