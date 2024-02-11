@@ -9,8 +9,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "publish_quarto_ghpages",
+    "title": "GitHub Actions",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website and was rendered on GitHub 2024-02-11 12:58:04.\n\n# Without auth:\nlibrary(googlesheets4)\nlibrary(gt)\n\ngooglesheets4::gs4_deauth()\n\nspreadsheet_url &lt;- \"https://docs.google.com/spreadsheets/d/1dnzTx2TIxk-QpoWNz08Jr_e4F2rZ4mDBgphzq9lwdYM/edit?usp=drive_link\"\n\ndata &lt;- googlesheets4::read_sheet(spreadsheet_url, range = \"Ark1!A1:D5\")\n\ndata |&gt; \n  gt()\n\n\n\n\n\n\n\nDato\nTid\nNavn\nBemærkning\n\n\n\n\n2024-01-27\nkl. 8.00-10.00\nAlbert\nbla\n\n\n2024-01-28\nKl. 9.00\nCamus\nhallo\n\n\n2024-01-27\nKl. 9.00\nHansen\nHejsa\n\n\n2024-01-27\nKl. 10.00\nPeter\nHej\n\n\n\n\n\n\n#######################################\n\n# With auth:\n# library(googledrive)\n# library(googlesheets4)\n# library(dplyr)\n# library(gt)\n\n\n# # Google Authentication\n# googledrive::drive_auth(\n#   scopes = \"https://www.googleapis.com/auth/drive.readonly\")\n# gs4_auth(token = drive_token())\n# \n# # Get Google Sheet ID\n# ss &lt;- googledrive::drive_get(\"hv8_planter_sheet\")\n# \n# # ss can be url???\n# # Read data from Google Sheet\n# data &lt;- googlesheets4::read_sheet(ss, sheet = \"content\")\n# \n# data |&gt; \n#   gt()\n#"
   }
 ]
