@@ -2,7 +2,7 @@
 title: "GitHub Actions"
 ---
 
-This is a Quarto website and was rendered on GitHub `{r} Sys.time()`.
+This is a Quarto website and was rendered on GitHub `{r} Sys.time()` at `{r} Sys.timezone()`.
 
 
 
