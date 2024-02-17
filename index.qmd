@@ -4,11 +4,20 @@ title: "GitHub Actions"
 
 This is a Quarto website and was rendered on GitHub `{r} Sys.time()` at `{r} Sys.timezone()`.
 
+In the following I test R code to:
+
+- read public shared googlesheet from Google Drive
+- read googlesheet from private Google Drive
+- download and read file (.rds) from private Google Drive
+- write and upload file (.rds) to private Google Drive
+- read data from external API
+
 
 
 ```{r}
 #| echo: true
 #| warning: false
+#| eval:  true
 
 
 # Without auth:
@@ -24,33 +33,39 @@ data <- googlesheets4::read_sheet(spreadsheet_url, range = "Ark1!A1:D5")
 data |> 
   gt()
 
+```
 
-#######################################
+
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
 
 # With auth:
-# library(googledrive)
-# library(googlesheets4)
-# library(dplyr)
-# library(gt)
+library(googledrive)
+library(googlesheets4)
+library(dplyr)
+library(gt)
 
 
-# # Google Authentication
-# googledrive::drive_auth(
-#   scopes = "https://www.googleapis.com/auth/drive.readonly")
-# gs4_auth(token = drive_token())
-# 
-# # Get Google Sheet ID
-# ss <- googledrive::drive_get("hv8_planter_sheet")
-# 
-# # ss can be url???
-# # Read data from Google Sheet
-# data <- googlesheets4::read_sheet(ss, sheet = "content")
-# 
-# data |> 
-#   gt()
-# 
+# Google Authentication
+googledrive::drive_auth(
+  scopes = "https://www.googleapis.com/auth/drive.readonly")
+gs4_auth(token = drive_token())
+
+# Get Google Sheet ID
+ss <- googledrive::drive_get("hv8_planter_sheet")
+
+# ss can be url???
+# Read data from Google Sheet
+data <- googlesheets4::read_sheet(ss, sheet = "content")
+
+data |> 
+  gt()
 
 
 ```
+
+
 
 
