@@ -132,41 +132,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a test website to run R code within Quarto on Github and publish a Quarto website to document when the code has been executed.</p>
-<p>With GitHub Actions on GitHub:</p>
+<p>This is a test website to run R code within Quarto on Github and publish a Quarto website.</p>
+<p>With GitHub Actions on GitHub I can:</p>
 <ul>
-<li>install Quarto + R and the correct versions of each R package you need</li>
-<li>render a Quarto project (not render any files locally!)</li>
-<li>publish a Quarto project on GitHub Pages</li>
-<li>Execute R code and content in <code>qmd</code> files</li>
+<li>install Quarto + R and the correct versions of each R package you need (yml file)</li>
+<li>render a Quarto project (not render any files locally!) (yml file)</li>
+<li>publish a Quarto project on GitHub Pages (yml file)</li>
+<li>execute R code and content in <code>qmd</code> files</li>
+<li>document when the code has been executed</li>
+<li>produce a report automatically on a schedule</li>
 </ul>
-<p>Setting things up Workflow:</p>
-<ul>
-<li>Create Quarto website project on my Mac with git and renv.</li>
+<p>Workflow - setting things up:</p>
+<ol type="1">
+<li>Create Quarto website project with git and renv in RStudio on my Mac.</li>
 <li>Commit with Sourcetree ??</li>
-<li>Create my new repository on GitHub with <code>usethis::use_github()</code> in RStudio in my R project (My GitHub token used in <code>gitcreds::gitcreds_set()</code> controls GitHub account)</li>
+<li>Create my new repository on GitHub with <code>usethis::use_github()</code> in RStudio in my R project (My GitHub token used in <code>gitcreds::gitcreds_set()</code> controls which GitHub account is used)</li>
 <li>On GitHub in my new repository: main -&gt; View all branches -&gt; Create a branch -&gt; “gh-pages”</li>
-<li>Create txt file <code>publish.yaml</code> file in new folders <code>.github/workflows</code>. Copy/paste <a href="https://quarto.org/docs/publishing/github-pages.html#example-knitr-with-renv">complete example of a GitHub Action</a> into <code>publish.yaml</code></li>
+<li>Create txt file <code>publish.yaml</code> file in new folders <code>.github/workflows</code>. Copy/paste [complete example of a GitHub Action 1.(https://quarto.org/docs/publishing/github-pages.html#example-knitr-with-renv) into <code>publish.yaml</code></li>
 <li>(notice that I have not rendered locally at all)</li>
 <li>Commit with Sourcetree</li>
-<li>push to GitHub in in RStudio in my R project</li>
+<li>Push to GitHub in in RStudio</li>
 <li>On GitHub in my new repository:
 <ul>
 <li>Pages -&gt; Branch -&gt; change from “main” to “gh-pages” and save</li>
-<li>Top bar -&gt; Actions, where I can follow the “pages build and deployment” and then I go to visit the website</li>
+<li>Top bar -&gt; Actions, - here I can follow the “pages build and deployment” and then I go to visit the website</li>
 </ul></li>
-</ul>
-<p>Writing R code and website content Workflow:</p>
-<ul>
+</ol>
+<p>Workflow - writing R code and website content:</p>
+<ol type="1">
 <li>Write R code and content in <code>qmd</code> files</li>
 <li>Call <code>renv::snapshot()</code> to save the state of your project library in <code>renv.lock</code></li>
 <li>Commit with Sourcetree</li>
-<li>push to GitHub in in RStudio in my R project</li>
-</ul>
+<li>Push to GitHub in in RStudio in my R project</li>
+</ol>
 <p>Ressources:</p>
 <ul>
-<li>ggnot2 YouTube: <a href="https://www.youtube.com/watch?v=arzBRW5XIkg&amp;t=1s">Publish a Quarto project using GitHub Pages+GitHub Actions in 6 minutes (no need to render locally!)</a></li>
 <li>Quarto: <a href="https://quarto.org/docs/publishing/github-pages.html#executing-code">GitHub Pages, Executing Code</a></li>
+<li>ggnot2 YouTube: <a href="https://www.youtube.com/watch?v=arzBRW5XIkg&amp;t=1s">Publish a Quarto project using GitHub Pages+GitHub Actions in 6 minutes (no need to render locally!)</a></li>
+<li>Article: <a href="https://rfortherestofus.com/2023/05/github-actions">How to Use GitHub Actions with R to Run Code Automatically</a></li>
 </ul>
 
 
@@ -560,6 +563,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Morten Lorenzen 2024</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
