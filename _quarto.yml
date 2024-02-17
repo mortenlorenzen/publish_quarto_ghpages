@@ -9,6 +9,10 @@ website:
         text: Home
       - href: about.qmd
         text: About
+        
+  page-footer: 
+    center: "© Morten Lorenzen 2024"
+    background: light        
 
 format:
   html:

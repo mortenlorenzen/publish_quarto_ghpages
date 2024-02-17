@@ -2,43 +2,45 @@
 title: "About"
 ---
 
-This is a test website to run R code within Quarto on Github and publish a Quarto website to document when the code has been executed.
+This is a test website to run R code within Quarto on Github and publish a Quarto website.
 
-With GitHub Actions on GitHub:
+With GitHub Actions on GitHub I can:
 
-- install Quarto + R and the correct versions of each R package you need
-- render a Quarto project (not render any files locally!)
-- publish a Quarto project on GitHub Pages
-- Execute R code and content in `qmd` files
+- install Quarto + R and the correct versions of each R package you need (yml file)
+- render a Quarto project (not render any files locally!) (yml file)
+- publish a Quarto project on GitHub Pages (yml file)
+- execute R code and content in `qmd` files
+- document when the code has been executed
+- produce a report automatically on a schedule
 
 
-Setting things up Workflow:
+Workflow - setting things up:
 
-- Create Quarto website project on my Mac with git and renv.
-- Commit with Sourcetree ??
-- Create  my new repository on GitHub with `usethis::use_github()` in RStudio in my R project (My GitHub token used in `gitcreds::gitcreds_set()` controls GitHub account)
-- On GitHub in my new repository: main -> View all branches -> Create a branch -> "gh-pages"
-- Create txt file `publish.yaml` file in new folders `.github/workflows`. Copy/paste [complete example of a GitHub Action ](https://quarto.org/docs/publishing/github-pages.html#example-knitr-with-renv) into `publish.yaml`
-- (notice that I have not rendered locally at all)
-- Commit with Sourcetree
-- push to GitHub in in RStudio in my R project
-- On GitHub in my new repository: 
+1. Create Quarto website project with git and renv in RStudio on my Mac.
+1. Commit with Sourcetree ??
+1. Create  my new repository on GitHub with `usethis::use_github()` in RStudio in my R project (My GitHub token used in `gitcreds::gitcreds_set()` controls which GitHub account is used)
+1. On GitHub in my new repository: main -> View all branches -> Create a branch -> "gh-pages"
+1. Create txt file `publish.yaml` file in new folders `.github/workflows`. Copy/paste [complete example of a GitHub Action 1.(https://quarto.org/docs/publishing/github-pages.html#example-knitr-with-renv) into `publish.yaml`
+1. (notice that I have not rendered locally at all)
+1. Commit with Sourcetree
+1. Push to GitHub in in RStudio
+1. On GitHub in my new repository: 
    - Pages -> Branch -> change from "main" to "gh-pages" and save
-   - Top bar -> Actions, where I can follow the "pages build and deployment" and then I go to visit the website
+   - Top bar -> Actions, - here I can follow the "pages build and deployment" and then I go to visit the website
 
 
-Writing R code and website content Workflow:
+Workflow - writing R code and website content:
 
-- Write R code and content in `qmd` files
-- Call `renv::snapshot()` to save the state of your project library in `renv.lock`
-- Commit with Sourcetree
-- push to GitHub in in RStudio in my R project
+1. Write R code and content in `qmd` files
+1. Call `renv::snapshot()` to save the state of your project library in `renv.lock`
+1. Commit with Sourcetree
+1. Push to GitHub in in RStudio in my R project
 
 
 
 Ressources: 
 
-- ggnot2 YouTube: [Publish a Quarto project using GitHub Pages+GitHub Actions in 6 minutes (no need to render locally!)](https://www.youtube.com/watch?v=arzBRW5XIkg&t=1s)
 - Quarto: [GitHub Pages, Executing Code](https://quarto.org/docs/publishing/github-pages.html#executing-code)
-
+- ggnot2 YouTube: [Publish a Quarto project using GitHub Pages+GitHub Actions in 6 minutes (no need to render locally!)](https://www.youtube.com/watch?v=arzBRW5XIkg&t=1s)
+- Article: [How to Use GitHub Actions with R to Run Code Automatically](https://rfortherestofus.com/2023/05/github-actions)
 
