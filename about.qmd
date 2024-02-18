@@ -2,6 +2,14 @@
 title: "About"
 ---
 
+With GitHub Actions on GitHub I can:
+
+- install Quarto + R and the correct versions of each R package you need (yml file)
+- render a Quarto project (not render any files locally!) (yml file)
+- publish a Quarto project on GitHub Pages (yml file)
+- execute R code and content in `qmd` files
+
+
 Here is my Workflow for a Quarto website using GitHub Pages and GitHub Actions.
 
 Workflow - setting things up:

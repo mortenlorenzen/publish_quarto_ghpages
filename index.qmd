@@ -2,7 +2,7 @@
 title: "GitHub Actions"
 ---
 
-This is a sandbox Quarto website with GitHub Actions to:
+This is a sandbox Quarto website using GitHub Actions to:
 
 - run R code within Quarto on Github
 - publish a Quarto website on GitHub Pages
@@ -12,11 +12,4 @@ Use cases:
 
 - run R scrips remotely and document when the code has been executed
 - produce and publish a report automatically on a schedule
-
-
-With GitHub Actions on GitHub I can:
-
-- install Quarto + R and the correct versions of each R package you need (yml file)
-- render a Quarto project (not render any files locally!) (yml file)
-- publish a Quarto project on GitHub Pages (yml file)
-- execute R code and content in `qmd` files
+- ...
