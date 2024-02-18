@@ -2,17 +2,7 @@
 title: "About"
 ---
 
-This is a test website to run R code within Quarto on Github and publish a Quarto website.
-
-With GitHub Actions on GitHub I can:
-
-- install Quarto + R and the correct versions of each R package you need (yml file)
-- render a Quarto project (not render any files locally!) (yml file)
-- publish a Quarto project on GitHub Pages (yml file)
-- execute R code and content in `qmd` files
-- document when the code has been executed
-- produce a report automatically on a schedule
-
+Here is my Workflow for a Quarto website using GitHub Pages and GitHub Actions.
 
 Workflow - setting things up:
 
@@ -29,18 +19,21 @@ Workflow - setting things up:
    - Top bar -> Actions, - here I can follow the "pages build and deployment" and then I go to visit the website
 
 
-Workflow - writing R code and website content:
+Workflow:
 
 1. Write R code and content in `qmd` files
 1. Call `renv::snapshot()` to save the state of your project library in `renv.lock`
 1. Commit with Sourcetree
-1. Push to GitHub in in RStudio in my R project
+1. Push to GitHub in in RStudio
+1. From here GitHub Actions runs automatically. It
+   - runs the R code
+   - renders the Quarto website
+   - publishes the Quarto website on GitHub Pages
 
 
-
-Ressources: 
+Resources: 
 
 - Quarto: [GitHub Pages, Executing Code](https://quarto.org/docs/publishing/github-pages.html#executing-code)
-- ggnot2 YouTube: [Publish a Quarto project using GitHub Pages+GitHub Actions in 6 minutes (no need to render locally!)](https://www.youtube.com/watch?v=arzBRW5XIkg&t=1s)
+- ggnot2 on YouTube: [Publish a Quarto project using GitHub Pages+GitHub Actions in 6 minutes (no need to render locally!)](https://www.youtube.com/watch?v=arzBRW5XIkg&t=1s)
 - Article: [How to Use GitHub Actions with R to Run Code Automatically](https://rfortherestofus.com/2023/05/github-actions)
 

@@ -1,0 +1,94 @@
+---
+title: "Sandbox R code"
+---
+
+This Quarto website was rendered on GitHub **`{r} Sys.time()` at `{r} Sys.timezone()` time**.
+
+In the following I test R code to:
+
+1. Read a public shared googlesheet from Google Drive ✅ 
+1. Read data from an external API ✅ 
+1. Read a googlesheet from private Google Drive
+1. Download and read a file (.rds or .xlsx) from private Google Drive 
+1. Write and upload a file (.rds) to private Google Drive
+
+
+\
+Read a public shared googlesheet from Google Drive
+```{r}
+#| echo: true
+#| warning: false
+#| eval:  true
+
+library(googlesheets4)
+library(gt)
+
+googlesheets4::gs4_deauth()     # Without auth
+
+spreadsheet_url <- "https://docs.google.com/spreadsheets/d/1dnzTx2TIxk-QpoWNz08Jr_e4F2rZ4mDBgphzq9lwdYM/edit?usp=drive_link"
+datatable <- googlesheets4::read_sheet(spreadsheet_url, range = "Ark1!A1:D5")
+
+# datatable |> write_rds("datatable.rds")  # NOT TESTED write and save a file (.rds) to my GitHub repository
+datatable |> gt()                        # print my datatable
+```
+
+\
+Read data from an external API: [The Star Wars API](https://swapi.dev/)
+```{r}
+#| echo: true
+#| warning: false
+#| eval: true
+
+library(httr2)
+library(tidyr)
+library(gt)
+
+resp_json <- 
+  httr2::request("https://swapi.dev/api/people/") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json(simplifyVector = TRUE)
+
+name_people <- 
+  resp_json$results$name |>  tidyr::as_tibble()
+name_people |> gt()
+```
+
+\
+Read a googlesheet from private Google Drive
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+library(googledrive)
+library(googlesheets4)
+library(dplyr)
+library(gt)
+
+
+# Google Authentication
+googledrive::drive_auth(
+  scopes = "https://www.googleapis.com/auth/drive.readonly")
+gs4_auth(token = drive_token())
+
+# Get Google Sheet ID
+ss <- googledrive::drive_get("hv8_planter_sheet")
+
+# ss can be url???
+# Read data from Google Sheet
+data <- googlesheets4::read_sheet(ss, sheet = "content")
+
+data |> gt()
+```
+
+\
+
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+
+
+
+```
