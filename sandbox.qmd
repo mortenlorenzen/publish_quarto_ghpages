@@ -48,7 +48,7 @@ library(readxl)
 library(gt)
 
 file_url <- "https://docs.google.com/spreadsheets/d/1PyDgAmOCCqOCWn-IEvhvj0RReoLyQwwa/edit?usp=drive_link&ouid=110726128853064340139&rtpof=true&sd=true"
-googledrive::drive_download(file_url, path = "tq_get.xlsx", overwrite = TRUE) 
+googledrive::drive_download(as_id(file_url), path = "tq_get.xlsx", overwrite = TRUE) 
 
 file <- readxl::read_xlsx("tq_get.xlsx")
 file |> gt()  
