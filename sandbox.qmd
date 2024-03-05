@@ -4,13 +4,17 @@ title: "Sandbox R code"
 
 This Quarto website was rendered on GitHub **`{r} Sys.time()` at `{r} Sys.timezone()` time**.
 
-In the following I test R code to:
+The following code is focused on connecting R on GitHub to external data sources.
+
+I test R code to:
 
 1. Read a public shared googlesheet from Google Drive ✅ 
-1. Read data from an external API ✅ 
-1. Read a googlesheet from private Google Drive
-1. Download and read a file (.rds or .xlsx) from private Google Drive 
-1. Write and upload a file (.rds) to private Google Drive
+1. Read a public shared .xlsx file from Google Drive
+1. Download a public shared .rds file from Google Drive 
+1. Read data from an external API, Star Wars ✅ 
+1. Read data from an external API, Weather forecast
+1. Read and download files from private Google Drive, with authentication
+
 
 
 \
@@ -33,6 +37,37 @@ datatable |> gt()                        # print my datatable
 ```
 
 \
+Read a public shared .xlsx file from Google Drive
+```{r}
+#| echo: true
+#| warning: true
+#| eval: true
+
+library(googledrive)
+library(readxl)
+library(gt)
+
+file_url <- "https://docs.google.com/spreadsheets/d/1PyDgAmOCCqOCWn-IEvhvj0RReoLyQwwa/edit?usp=drive_link&ouid=110726128853064340139&rtpof=true&sd=true"
+googledrive::drive_download(file_url, path = "tq_get.xlsx", overwrite = TRUE) 
+
+file <- readxl::read_xlsx("tq_get.xlsx")
+file |> gt()  
+
+```
+
+\
+Download a public shared .rds file from Google Drive 
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+
+
+
+```
+
+\
 Read data from an external API: [The Star Wars API](https://swapi.dev/)
 ```{r}
 #| echo: true
@@ -51,6 +86,56 @@ resp_json <-
 name_people <- 
   resp_json$results$name |>  tidyr::as_tibble()
 name_people |> gt()
+```
+
+
+\
+Read data from an external API, Weather forecast in NYC, API: [The National Weather Service (NWS)](https://api.weather.gov)
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+# library(httr2)
+# library(purrr)
+# library(dplyr)
+# library(lubridate)
+# library(gt)
+# 
+# NWS_base_url <- 'https://api.weather.gov'
+# 
+# forecast_url <- request(NWS_base_url) |> 
+#   req_url_path_append(
+#     'points',
+#     '40.730610,-73.935242'
+#   ) |> 
+#   req_perform() |> 
+#   resp_body_json() |> 
+#   # dplyr::glimpse() |> 
+#   purrr::pluck('properties', 'forecastHourly')
+# 
+# 
+# forecast_response <- request(forecast_url) |> 
+#   req_perform()
+# 
+# extracted_data <- forecast_response |> 
+#   resp_body_json() |> 
+#   pluck('properties', 'periods') |> 
+#   purrr::map_dfr( # iterates over each list and binds rows to a tibble
+#     \(x) {
+#       tibble(
+#         time = x |> pluck('startTime'),
+#         temp_F = x |> pluck('temperature'),
+#         rain_prob = x |> pluck('probabilityOfPrecipitation', 'value'),
+#         forecast = x |> pluck('shortForecast')
+#       )
+#     }
+#   ) |> 
+#   dplyr::mutate(
+#     time = time |> lubridate::ymd_hms()
+#   )
+# 
+# extracted_data |> gt()
 ```
 
 \

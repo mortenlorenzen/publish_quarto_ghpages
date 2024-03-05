@@ -18,22 +18,22 @@ Workflow - setting things up:
 1. Commit with Sourcetree ??
 1. Create  my new repository on GitHub with `usethis::use_github()` in RStudio in my R project (My GitHub token used in `gitcreds::gitcreds_set()` controls which GitHub account is used)
 1. On GitHub in my new repository: main -> View all branches -> Create a branch -> "gh-pages"
-1. Create txt file `publish.yaml` file in new folders `.github/workflows`. Copy/paste [complete example of a GitHub Action 1.(https://quarto.org/docs/publishing/github-pages.html#example-knitr-with-renv) into `publish.yaml`
-1. (notice that I have not rendered locally at all)
+1. In RStudio create txt file `publish.yaml` file in new folders `.github/workflows`. Copy/paste [complete example of a GitHub Action](https://quarto.org/docs/publishing/github-pages.html#example-knitr-with-renv) into `publish.yaml`
 1. Commit with Sourcetree
 1. Push to GitHub in in RStudio
 1. On GitHub in my new repository: 
    - Pages -> Branch -> change from "main" to "gh-pages" and save
-   - Top bar -> Actions, - here I can follow the "pages build and deployment" and then I go to visit the website
+   - Top bar -> Actions, - here I can follow the "pages build and deployment" and then I go to visit the website 🙂
+1. (notice that I have not rendered locally at all)
 
 
 Workflow:
 
 1. Write R code and content in `qmd` files
-1. Call `renv::snapshot()` to save the state of your project library in `renv.lock`
+1. Call `renv::snapshot()` to save the state of my project libraries in `renv.lock`
 1. Commit with Sourcetree
 1. Push to GitHub in in RStudio
-1. From here GitHub Actions runs automatically. It
+1. From here GitHub Actions runs **automatically**. It
    - runs the R code
    - renders the Quarto website
    - publishes the Quarto website on GitHub Pages

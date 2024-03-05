@@ -1,6 +1,6 @@
-# Run R code on GitHub
+# Run R code on GitHub using GitHub Actions
 
-Link: [mortenlorenzen.github.io/publish_quarto_ghpages/](https://mortenlorenzen.github.io/publish_quarto_ghpages/)
+Link to website: [mortenlorenzen.github.io/publish_quarto_ghpages/](https://mortenlorenzen.github.io/publish_quarto_ghpages/)
 
 
 
