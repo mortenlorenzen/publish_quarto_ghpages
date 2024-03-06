@@ -67,7 +67,7 @@ file_upload_url <- "https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw
 #  dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |>
 #  readr::write_rds("test_rds_upload.rds")
 
-googledrive::drive_put(file_upload, path = as_id(file_upload_url)) # upload file
+# googledrive::drive_put(file_upload, path = as_id(file_upload_url)) # upload file
 
 googledrive::drive_download(as_id(file_upload_url), path = "test_rds_upload.rds", overwrite = TRUE) # download file again
 
