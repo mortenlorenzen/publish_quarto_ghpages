@@ -47,6 +47,8 @@ library(googledrive)
 library(readxl)
 library(gt)
 
+googledrive::drive_deauth()     # Without auth
+
 file_url <- "https://docs.google.com/spreadsheets/d/1PyDgAmOCCqOCWn-IEvhvj0RReoLyQwwa/edit?usp=drive_link&ouid=110726128853064340139&rtpof=true&sd=true"
 googledrive::drive_download(as_id(file_url), path = "tq_get.xlsx", overwrite = TRUE) 
 
