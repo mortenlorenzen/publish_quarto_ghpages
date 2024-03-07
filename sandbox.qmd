@@ -131,11 +131,11 @@ file |> gt() # print my datatable
 ```
 
 \
-Read data from an external API: [The Star Wars API](https://swapi.dev/)
+Read data from an external API: [The Star Wars API](https://swapi.dev/) - API IS DOWN!
 ```{r}
 #| echo: true
 #| warning: false
-#| eval: true
+#| eval: false
 
 library(httr2)
 library(tidyr)
