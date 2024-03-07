@@ -139,7 +139,7 @@ name_people |> gt()
 
 
 \
-Read data from an external API, Weather forecast in NYC, API: [The National Weather Service (NWS)](https://api.weather.gov)
+Read data from an external API, Weather forecast in NYC, API: [The National Weather Service (NWS)](https://api.weather.gov) - ERROR: there is no package called 'httr2', 'lubridate' ???
 ```{r}
 #| echo: true
 #| warning: false
