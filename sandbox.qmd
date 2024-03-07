@@ -38,7 +38,6 @@ datatable |> gt()                        # print my datatable
 
 \
 Download and read a public shared `.xlsx` file from Google Drive\
-Write and upload a `.rds` file to Google Drive
 ```{r}
 #| echo: true
 #| warning: false
@@ -46,34 +45,69 @@ Write and upload a `.rds` file to Google Drive
 
 library(googledrive)
 library(readxl)
-library(readr)
-library(dplyr)
 library(gt)
 
-googledrive::drive_deauth()     # Without auth
+googledrive::drive_deauth()     # Without giving googledrive package access to my Google account
 
 # Download and read a public shared `.xlsx` file from Google Drive
-
 file_url <- "https://docs.google.com/spreadsheets/d/1AIAkWHGig6a0zG-iYH0Lj9PC2fLmfja5/edit?usp=drive_link&ouid=110726128853064340139&rtpof=true&sd=true"
 googledrive::drive_download(as_id(file_url), path = "test_xlsx.xlsx", overwrite = TRUE) # download file
 
 file <- readxl::read_xlsx("test_xlsx.xlsx") # read file
 file |> gt() # print my datatable
 
-# Write and upload a .rds file to Google Drive
+```
 
-file_upload_url <- "https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw007wG/view?usp=drive_link"
-#file_upload <- file |> 
+Write and upload a `.rds` file to Google Drive
+```{r}
+#| echo: true
+#| warning: false
+#| eval: true
+
+library(googledrive)
+library(readr)
+library(dplyr)
+library(gt)
+
+
+## Write and upload a .rds file to Google Drive
+## Does only work with drive_auth() - so this does NOT work on GitHub.
+#googledrive::drive_auth() 
+#
+#folder_upload_url <- "https://drive.google.com/drive/folders/1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4?usp=drive_link"
+#folder_upload_id <- "1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4"
+#
+#file |> 
 #  dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |>
 #  readr::write_rds("test_rds_upload.rds")
+#
+#googledrive::drive_put("test_rds_upload.rds", path = as_id(folder_upload_id)) # upload file
 
-# googledrive::drive_put(file_upload, path = as_id(file_upload_url)) # upload file
 
+
+# Download and read the newly written public shared .rds file from Google Drive
+file_upload_url <- "https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw007wG/view?usp=drive_link"
 googledrive::drive_download(as_id(file_upload_url), path = "test_rds_upload.rds", overwrite = TRUE) # download file again
 
 file <- readr::read_rds("test_rds_upload.rds") # read file
 file |> gt() # print my datatable
 
+```
+
+\
+Check authentication and de-authentication
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+library(googledrive)
+
+drive_user()
+drive_about()
+
+drive_deauth()   
+drive_auth()    
 ```
 
 \
