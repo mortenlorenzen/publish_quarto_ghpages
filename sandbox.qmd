@@ -12,8 +12,8 @@ I test R code to:
 1. Download and read a public shared .`xlsx` file from Google Drive ✅ 
 1. Write and upload a `.rds` file to Google Drive
 1. Download and read a public shared `.rds` file from Google Drive ✅ 
-1. Read data from an external API, Star Wars ✅ 
-1. Read data from an external API, Weather forecast
+1. Read data from an external API, Star Wars ✅  - API IS DOWN!
+1. Read data from an external API, Weather forecast ✅ 
 1. Read and download files from private Google Drive, with authentication
 
 
@@ -28,7 +28,7 @@ Read a public shared `googlesheet` from Google Drive
 library(googlesheets4)
 library(gt)
 
-googlesheets4::gs4_deauth()     # Without auth
+googlesheets4::gs4_deauth()   # Without giving {googledrive} access to my Google account
 
 spreadsheet_url <- "https://docs.google.com/spreadsheets/d/1dnzTx2TIxk-QpoWNz08Jr_e4F2rZ4mDBgphzq9lwdYM/edit?usp=drive_link"
 datatable <- googlesheets4::read_sheet(spreadsheet_url, range = "Ark1!A1:D5")
@@ -47,7 +47,7 @@ library(googledrive)
 library(readxl)
 library(gt)
 
-googledrive::drive_deauth()     # Without giving googledrive package access to my Google account
+googledrive::drive_deauth()  # Without giving {googledrive} access to my Google account
 
 # Download and read a public shared `.xlsx` file from Google Drive
 file_url <- "https://docs.google.com/spreadsheets/d/1AIAkWHGig6a0zG-iYH0Lj9PC2fLmfja5/edit?usp=drive_link&ouid=110726128853064340139&rtpof=true&sd=true"
@@ -94,21 +94,7 @@ file |> gt() # print my datatable
 
 ```
 
-\
-Check authentication and de-authentication
-```{r}
-#| echo: true
-#| warning: false
-#| eval: false
 
-library(googledrive)
-
-drive_user()
-drive_about()
-
-drive_deauth()   
-drive_auth()    
-```
 
 \
 Download and read a public shared `.rds` file from Google Drive
@@ -121,7 +107,7 @@ library(googledrive)
 library(readr)
 library(gt)
 
-googledrive::drive_deauth()     # Without auth
+googledrive::drive_deauth()  # Without giving {googledrive} access to my Google account
 
 file_url <- "https://drive.google.com/file/d/1tADUi-z8sH6B8ByvZKWXVMcSNVQUP2_H/view?usp=drive_link"
 googledrive::drive_download(as_id(file_url), path = "test_rds.rds", overwrite = TRUE) # download file
@@ -157,48 +143,68 @@ Read data from an external API, Weather forecast in NYC, API: [The National Weat
 ```{r}
 #| echo: true
 #| warning: false
+#| eval: true
+
+library(httr2)
+library(purrr)
+library(dplyr)
+library(lubridate)
+library(gt)
+
+NWS_base_url <- 'https://api.weather.gov'
+
+forecast_url <- request(NWS_base_url) |> 
+  req_url_path_append(
+    'points', '40.730610,-73.935242'
+  ) |> 
+  req_perform() |> 
+  resp_body_json() |> 
+  # dplyr::glimpse() |> 
+  purrr::pluck('properties', 'forecastHourly')
+
+
+extracted_data <- request(forecast_url) |> 
+  req_perform() |>
+  resp_body_json() |> 
+  purrr::pluck('properties', 'periods') |> 
+  purrr::map_dfr(    # iterates over each list and binds rows to a tibble
+    \(x) {tibble(
+      time = x |> purrr::pluck('startTime'),
+      temp_F = x |> purrr::pluck('temperature'),
+      rain_prob = x |> purrr::pluck('probabilityOfPrecipitation', 'value'),
+      forecast = x |> purrr::pluck('shortForecast')
+    )}
+  ) |> 
+  dplyr::mutate(
+    time = time |> lubridate::ymd_hms()
+  )
+
+extracted_data |> gt::gt() |> gt::opt_interactive(page_size_default = 10)
+```
+
+
+\
+Check authentication and de-authentication information
+```{r}
+#| echo: true
+#| warning: false
 #| eval: false
 
-# library(httr2)
-# library(purrr)
-# library(dplyr)
-# library(lubridate)
-# library(gt)
-# 
-# NWS_base_url <- 'https://api.weather.gov'
-# 
-# forecast_url <- request(NWS_base_url) |> 
-#   req_url_path_append(
-#     'points',
-#     '40.730610,-73.935242'
-#   ) |> 
-#   req_perform() |> 
-#   resp_body_json() |> 
-#   # dplyr::glimpse() |> 
-#   purrr::pluck('properties', 'forecastHourly')
-# 
-# 
-# forecast_response <- request(forecast_url) |> 
-#   req_perform()
-# 
-# extracted_data <- forecast_response |> 
-#   resp_body_json() |> 
-#   pluck('properties', 'periods') |> 
-#   purrr::map_dfr( # iterates over each list and binds rows to a tibble
-#     \(x) {
-#       tibble(
-#         time = x |> pluck('startTime'),
-#         temp_F = x |> pluck('temperature'),
-#         rain_prob = x |> pluck('probabilityOfPrecipitation', 'value'),
-#         forecast = x |> pluck('shortForecast')
-#       )
-#     }
-#   ) |> 
-#   dplyr::mutate(
-#     time = time |> lubridate::ymd_hms()
-#   )
-# 
-# extracted_data |> gt()
+library(googledrive)
+
+# Get info on current user and Drive capabilities
+drive_user() 
+drive_about() 
+
+# Edit and view auth configuration
+drive_oauth_client()   # (client, path, api_key) the current user-configured OAuth client
+drive_api_key()        # the current user-configured API key
+drive_auth_configure() # An object of R6 class gargle::AuthState, invisibly
+
+drive_deauth()  # Suspend authorization
+drive_auth()    # Authorize googledrive
+
+drive_scopes()  # Produce scopes specific to the Drive API
 ```
 
 \
