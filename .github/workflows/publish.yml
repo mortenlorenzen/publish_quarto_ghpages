@@ -26,6 +26,9 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+          
+      - name: Install additional R packages
+        run: Rscript -e 'install.packages("httr2")'    
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
