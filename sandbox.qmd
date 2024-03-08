@@ -69,20 +69,24 @@ library(readr)
 library(dplyr)
 library(gt)
 
+googledrive::drive_deauth() 
 
-## Write and upload a .rds file to Google Drive
-## Does only work with API key and drive_auth()
-googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY")
-googledrive::drive_auth(email ="lorenzenmail@gmail.com")
 
-folder_upload_url <- "https://drive.google.com/drive/folders/1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4?usp=drive_link"
-folder_upload_id <- "1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4"
 
-file |> 
-  dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |>
-  readr::write_rds("test_rds_upload.rds")
+# # Write and upload a .rds file to Google Drive
+# # THIS DOES NOT WORK ON GITHUB ACTIONS, but it does work Non-interactive locally (with real GOOGLE_API_KEY)
+# googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") 
+# googledrive::drive_auth(email ="lorenzenmail@gmail.com")
+# 
+# file |> 
+#   dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |>
+#   readr::write_rds("test_rds_upload.rds")
+# 
+# folder_upload_url <- "https://drive.google.com/drive/folders/1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4?usp=drive_link"
+# folder_upload_id <- "1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4"
+# googledrive::drive_put("test_rds_upload.rds", path = as_id(folder_upload_id)) # upload file
 
-googledrive::drive_put("test_rds_upload.rds", path = as_id(folder_upload_id)) # upload file
+
 
 
 # Download and read the newly written public shared .rds file from Google Drive
