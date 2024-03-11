@@ -9,7 +9,7 @@ website:
         text: Home
       - href: sandbox_no_auth.qmd
         text: Sandbox no auth
-      - href: sandbox_no_auth.qmd
+      - href: sandbox_auth.qmd
         text: Sandbox with auth
       - href: about.qmd
         text: About
