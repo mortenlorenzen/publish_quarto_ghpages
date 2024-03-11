@@ -7,8 +7,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: sandbox.qmd
-        text: Sandbox
+      - href: sandbox_no_auth.qmd
+        text: Sandbox no auth
+      - href: sandbox_no_auth.qmd
+        text: Sandbox with auth
       - href: about.qmd
         text: About
         

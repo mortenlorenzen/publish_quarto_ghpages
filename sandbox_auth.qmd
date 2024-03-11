@@ -1,0 +1,117 @@
+---
+title: "Sandbox R code with authorization"
+---
+
+This Quarto website was rendered on GitHub **`{r} Sys.time()` at `{r} Sys.timezone()` time**.
+
+The following code is focused on connecting R on GitHub to external data sources **with authorization**.
+
+I test R code to:
+
+1. Write and upload a `.rds` file to Google Drive
+1. Read and download files from private Google Drive, with authentication
+
+
+Check authentication and de-authentication information
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+library(googledrive)
+
+# Get info on current user and Drive capabilities
+drive_user() 
+drive_about() 
+
+# Edit and view auth configuration
+drive_oauth_client()   # (client, path, api_key) the current user-configured OAuth client
+drive_api_key()        # the current user-configured API key
+drive_auth_configure() # An object of R6 class gargle::AuthState, invisibly
+
+drive_deauth()  # Suspend authorization
+drive_auth()    # Authorize googledrive
+
+drive_scopes()  # Produce scopes specific to the Drive API
+
+
+
+# Workflow to use Google Drive functions without interactive prompts
+drive_auth_configure(api_key = "GOOGLE_API_KEY")  
+drive_auth(email ="lorenzenmail@gmail.com")
+
+# Now you can use Google Drive functions without interactive prompts
+# Example: List files in your Drive
+drive_ls()
+```
+
+
+
+Write and upload a `.rds` file to Google Drive
+```{r}
+#| echo: true
+#| warning: false
+#| eval: true
+
+library(googledrive)
+library(readr)
+library(dplyr)
+library(gt)
+
+googledrive::drive_deauth() 
+
+
+
+# # Write and upload a .rds file to Google Drive
+# # THIS DOES NOT WORK ON GITHUB ACTIONS, but it does work Non-interactive locally (with real GOOGLE_API_KEY)
+# googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") 
+# googledrive::drive_auth(email ="lorenzenmail@gmail.com")
+# 
+# file |> 
+#   dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |>
+#   readr::write_rds("test_rds_upload.rds")
+# 
+# folder_upload_url <- "https://drive.google.com/drive/folders/1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4?usp=drive_link"
+# folder_upload_id <- "1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4"
+# googledrive::drive_put("test_rds_upload.rds", path = as_id(folder_upload_id)) # upload file
+
+
+
+
+# Download and read the newly written public shared .rds file from Google Drive
+file_upload_url <- "https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw007wG/view?usp=drive_link"
+googledrive::drive_download(as_id(file_upload_url), path = "test_rds_upload.rds", overwrite = TRUE) # download file again
+
+file <- readr::read_rds("test_rds_upload.rds") # read file
+file |> gt() # print my datatable
+
+```
+
+
+\
+Read a googlesheet from private Google Drive
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+library(googledrive)
+library(googlesheets4)
+library(dplyr)
+library(gt)
+
+
+# Google Authentication
+googledrive::drive_auth(
+  scopes = "https://www.googleapis.com/auth/drive.readonly")
+gs4_auth(token = drive_token())
+
+# Get Google Sheet ID
+ss <- googledrive::drive_get("hv8_planter_sheet")
+
+# ss can be url???
+# Read data from Google Sheet
+data <- googlesheets4::read_sheet(ss, sheet = "content")
+
+data |> gt()
+```
