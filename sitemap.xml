@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mortenlorenzen.github.io/publish_quarto_ghpages/about.html</loc>
-    <lastmod>2024-03-08T15:42:15.273Z</lastmod>
+    <lastmod>2024-03-11T14:02:06.112Z</lastmod>
   </url>
   <url>
-    <loc>https://mortenlorenzen.github.io/publish_quarto_ghpages/sandbox.html</loc>
-    <lastmod>2024-03-08T15:42:15.277Z</lastmod>
+    <loc>https://mortenlorenzen.github.io/publish_quarto_ghpages/sandbox_auth.html</loc>
+    <lastmod>2024-03-11T14:02:06.112Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mortenlorenzen.github.io/publish_quarto_ghpages/sandbox_no_auth.html</loc>
+    <lastmod>2024-03-11T14:02:06.112Z</lastmod>
   </url>
   <url>
     <loc>https://mortenlorenzen.github.io/publish_quarto_ghpages/index.html</loc>
-    <lastmod>2024-03-08T15:42:15.273Z</lastmod>
+    <lastmod>2024-03-11T14:02:06.112Z</lastmod>
   </url>
 </urlset>

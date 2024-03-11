@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Run R code on GitHub - Sandbox R code</title>
+<title>Run R code on GitHub - Sandbox R code with no authorization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,8 +134,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./sandbox.html" aria-current="page"> 
-<span class="menu-text">Sandbox</span></a>
+    <a class="nav-link active" href="./sandbox_no_auth.html" aria-current="page"> 
+<span class="menu-text">Sandbox no auth</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sandbox_no_auth.html"> 
+<span class="menu-text">Sandbox with auth</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -160,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sandbox R code</h1>
+<h1 class="title">Sandbox R code with no authorization</h1>
 </div>
 
 
@@ -177,8 +181,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This Quarto website was rendered on GitHub <strong>2024-03-08 15:44:53.65476 at UTC time</strong>.</p>
-<p>The following code is focused on connecting R on GitHub to external data sources.</p>
+<p>This Quarto website was rendered on GitHub <strong>2024-03-11 14:03:16.096375 at UTC time</strong>.</p>
+<p>The following code is focused on connecting R on GitHub to external data sources <strong>with no authorization</strong>.</p>
 <p>I test R code to:</p>
 <ol type="1">
 <li>Read a public shared <code>googlesheet</code> from Google Drive ✅</li>
@@ -187,7 +191,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Download and read a public shared <code>.rds</code> file from Google Drive ✅</li>
 <li>Read data from an external API, Star Wars ✅ - API IS DOWN!</li>
 <li>Read data from an external API, Weather forecast ✅</li>
-<li>Read and download files from private Google Drive, with authentication</li>
 </ol>
 <p><br>
 Read a public shared <code>googlesheet</code> from Google Drive</p>
@@ -203,23 +206,23 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>datatable <span class="sc">|&gt;</span> <span class="fu">gt</span>()                        <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<div id="kjdwyacxgv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kjdwyacxgv table {
+<div id="qcdvkruhnv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qcdvkruhnv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kjdwyacxgv thead, #kjdwyacxgv tbody, #kjdwyacxgv tfoot, #kjdwyacxgv tr, #kjdwyacxgv td, #kjdwyacxgv th {
+#qcdvkruhnv thead, #qcdvkruhnv tbody, #qcdvkruhnv tfoot, #qcdvkruhnv tr, #qcdvkruhnv td, #qcdvkruhnv th {
   border-style: none;
 }
 
-#kjdwyacxgv p {
+#qcdvkruhnv p {
   margin: 0;
   padding: 0;
 }
 
-#kjdwyacxgv .gt_table {
+#qcdvkruhnv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -245,12 +248,12 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-left-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_caption {
+#qcdvkruhnv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kjdwyacxgv .gt_title {
+#qcdvkruhnv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -262,7 +265,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-width: 0;
 }
 
-#kjdwyacxgv .gt_subtitle {
+#qcdvkruhnv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -274,7 +277,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-top-width: 0;
 }
 
-#kjdwyacxgv .gt_heading {
+#qcdvkruhnv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -286,13 +289,13 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_bottom_border {
+#qcdvkruhnv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_col_headings {
+#qcdvkruhnv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -307,7 +310,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_col_heading {
+#qcdvkruhnv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -327,7 +330,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   overflow-x: hidden;
 }
 
-#kjdwyacxgv .gt_column_spanner_outer {
+#qcdvkruhnv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -339,15 +342,15 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 4px;
 }
 
-#kjdwyacxgv .gt_column_spanner_outer:first-child {
+#qcdvkruhnv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kjdwyacxgv .gt_column_spanner_outer:last-child {
+#qcdvkruhnv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kjdwyacxgv .gt_column_spanner {
+#qcdvkruhnv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -359,11 +362,11 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   width: 100%;
 }
 
-#kjdwyacxgv .gt_spanner_row {
+#qcdvkruhnv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kjdwyacxgv .gt_group_heading {
+#qcdvkruhnv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -389,7 +392,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   text-align: left;
 }
 
-#kjdwyacxgv .gt_empty_group_heading {
+#qcdvkruhnv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -404,15 +407,15 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   vertical-align: middle;
 }
 
-#kjdwyacxgv .gt_from_md > :first-child {
+#qcdvkruhnv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kjdwyacxgv .gt_from_md > :last-child {
+#qcdvkruhnv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kjdwyacxgv .gt_row {
+#qcdvkruhnv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,7 +434,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   overflow-x: hidden;
 }
 
-#kjdwyacxgv .gt_stub {
+#qcdvkruhnv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -444,7 +447,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#kjdwyacxgv .gt_stub_row_group {
+#qcdvkruhnv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -458,15 +461,15 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   vertical-align: top;
 }
 
-#kjdwyacxgv .gt_row_group_first td {
+#qcdvkruhnv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kjdwyacxgv .gt_row_group_first th {
+#qcdvkruhnv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kjdwyacxgv .gt_summary_row {
+#qcdvkruhnv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -476,16 +479,16 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#kjdwyacxgv .gt_first_summary_row {
+#qcdvkruhnv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_first_summary_row.thick {
+#qcdvkruhnv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kjdwyacxgv .gt_last_summary_row {
+#qcdvkruhnv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -495,7 +498,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_grand_summary_row {
+#qcdvkruhnv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -505,7 +508,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#kjdwyacxgv .gt_first_grand_summary_row {
+#qcdvkruhnv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -515,7 +518,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-top-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_last_grand_summary_row_top {
+#qcdvkruhnv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -525,11 +528,11 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_striped {
+#qcdvkruhnv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kjdwyacxgv .gt_table_body {
+#qcdvkruhnv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -538,7 +541,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_footnotes {
+#qcdvkruhnv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -552,7 +555,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_footnote {
+#qcdvkruhnv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -561,7 +564,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#kjdwyacxgv .gt_sourcenotes {
+#qcdvkruhnv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -575,7 +578,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#kjdwyacxgv .gt_sourcenote {
+#qcdvkruhnv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -583,63 +586,63 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#kjdwyacxgv .gt_left {
+#qcdvkruhnv .gt_left {
   text-align: left;
 }
 
-#kjdwyacxgv .gt_center {
+#qcdvkruhnv .gt_center {
   text-align: center;
 }
 
-#kjdwyacxgv .gt_right {
+#qcdvkruhnv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kjdwyacxgv .gt_font_normal {
+#qcdvkruhnv .gt_font_normal {
   font-weight: normal;
 }
 
-#kjdwyacxgv .gt_font_bold {
+#qcdvkruhnv .gt_font_bold {
   font-weight: bold;
 }
 
-#kjdwyacxgv .gt_font_italic {
+#qcdvkruhnv .gt_font_italic {
   font-style: italic;
 }
 
-#kjdwyacxgv .gt_super {
+#qcdvkruhnv .gt_super {
   font-size: 65%;
 }
 
-#kjdwyacxgv .gt_footnote_marks {
+#qcdvkruhnv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kjdwyacxgv .gt_asterisk {
+#qcdvkruhnv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kjdwyacxgv .gt_indent_1 {
+#qcdvkruhnv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kjdwyacxgv .gt_indent_2 {
+#qcdvkruhnv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kjdwyacxgv .gt_indent_3 {
+#qcdvkruhnv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kjdwyacxgv .gt_indent_4 {
+#qcdvkruhnv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kjdwyacxgv .gt_indent_5 {
+#qcdvkruhnv .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -695,31 +698,30 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_deauth</span>()  <span class="co"># Without giving {googledrive} access to my Google account</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and read a public shared `.xlsx` file from Google Drive</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>file_url <span class="ot">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1AIAkWHGig6a0zG-iYH0Lj9PC2fLmfja5/edit?usp=drive_link&amp;ouid=110726128853064340139&amp;rtpof=true&amp;sd=true"</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="fu">as_id</span>(file_url), <span class="at">path =</span> <span class="st">"test_xlsx.xlsx"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>) <span class="co"># download file</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"test_xlsx.xlsx"</span>) <span class="co"># read file</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>file_url <span class="ot">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1AIAkWHGig6a0zG-iYH0Lj9PC2fLmfja5/edit?usp=drive_link&amp;ouid=110726128853064340139&amp;rtpof=true&amp;sd=true"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="fu">as_id</span>(file_url), <span class="at">path =</span> <span class="st">"test_xlsx.xlsx"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>) <span class="co"># download file</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"test_xlsx.xlsx"</span>) <span class="co"># read file</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<div id="jmvgawosyk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jmvgawosyk table {
+<div id="yedjiugajy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yedjiugajy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jmvgawosyk thead, #jmvgawosyk tbody, #jmvgawosyk tfoot, #jmvgawosyk tr, #jmvgawosyk td, #jmvgawosyk th {
+#yedjiugajy thead, #yedjiugajy tbody, #yedjiugajy tfoot, #yedjiugajy tr, #yedjiugajy td, #yedjiugajy th {
   border-style: none;
 }
 
-#jmvgawosyk p {
+#yedjiugajy p {
   margin: 0;
   padding: 0;
 }
 
-#jmvgawosyk .gt_table {
+#yedjiugajy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -745,12 +747,12 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-left-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_caption {
+#yedjiugajy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jmvgawosyk .gt_title {
+#yedjiugajy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -762,7 +764,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-width: 0;
 }
 
-#jmvgawosyk .gt_subtitle {
+#yedjiugajy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -774,7 +776,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-top-width: 0;
 }
 
-#jmvgawosyk .gt_heading {
+#yedjiugajy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -786,13 +788,13 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_bottom_border {
+#yedjiugajy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_col_headings {
+#yedjiugajy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -807,7 +809,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_col_heading {
+#yedjiugajy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -827,7 +829,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   overflow-x: hidden;
 }
 
-#jmvgawosyk .gt_column_spanner_outer {
+#yedjiugajy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -839,15 +841,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 4px;
 }
 
-#jmvgawosyk .gt_column_spanner_outer:first-child {
+#yedjiugajy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jmvgawosyk .gt_column_spanner_outer:last-child {
+#yedjiugajy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jmvgawosyk .gt_column_spanner {
+#yedjiugajy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -859,11 +861,11 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   width: 100%;
 }
 
-#jmvgawosyk .gt_spanner_row {
+#yedjiugajy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jmvgawosyk .gt_group_heading {
+#yedjiugajy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -889,7 +891,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   text-align: left;
 }
 
-#jmvgawosyk .gt_empty_group_heading {
+#yedjiugajy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -904,15 +906,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   vertical-align: middle;
 }
 
-#jmvgawosyk .gt_from_md > :first-child {
+#yedjiugajy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jmvgawosyk .gt_from_md > :last-child {
+#yedjiugajy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jmvgawosyk .gt_row {
+#yedjiugajy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -931,7 +933,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   overflow-x: hidden;
 }
 
-#jmvgawosyk .gt_stub {
+#yedjiugajy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -944,7 +946,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#jmvgawosyk .gt_stub_row_group {
+#yedjiugajy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -958,15 +960,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   vertical-align: top;
 }
 
-#jmvgawosyk .gt_row_group_first td {
+#yedjiugajy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jmvgawosyk .gt_row_group_first th {
+#yedjiugajy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jmvgawosyk .gt_summary_row {
+#yedjiugajy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -976,16 +978,16 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#jmvgawosyk .gt_first_summary_row {
+#yedjiugajy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_first_summary_row.thick {
+#yedjiugajy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jmvgawosyk .gt_last_summary_row {
+#yedjiugajy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -995,7 +997,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_grand_summary_row {
+#yedjiugajy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1005,7 +1007,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#jmvgawosyk .gt_first_grand_summary_row {
+#yedjiugajy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1015,7 +1017,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-top-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_last_grand_summary_row_top {
+#yedjiugajy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1025,11 +1027,11 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_striped {
+#yedjiugajy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jmvgawosyk .gt_table_body {
+#yedjiugajy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1038,7 +1040,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_footnotes {
+#yedjiugajy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1052,7 +1054,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_footnote {
+#yedjiugajy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1061,7 +1063,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#jmvgawosyk .gt_sourcenotes {
+#yedjiugajy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1075,7 +1077,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#jmvgawosyk .gt_sourcenote {
+#yedjiugajy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1083,63 +1085,63 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#jmvgawosyk .gt_left {
+#yedjiugajy .gt_left {
   text-align: left;
 }
 
-#jmvgawosyk .gt_center {
+#yedjiugajy .gt_center {
   text-align: center;
 }
 
-#jmvgawosyk .gt_right {
+#yedjiugajy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jmvgawosyk .gt_font_normal {
+#yedjiugajy .gt_font_normal {
   font-weight: normal;
 }
 
-#jmvgawosyk .gt_font_bold {
+#yedjiugajy .gt_font_bold {
   font-weight: bold;
 }
 
-#jmvgawosyk .gt_font_italic {
+#yedjiugajy .gt_font_italic {
   font-style: italic;
 }
 
-#jmvgawosyk .gt_super {
+#yedjiugajy .gt_super {
   font-size: 65%;
 }
 
-#jmvgawosyk .gt_footnote_marks {
+#yedjiugajy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jmvgawosyk .gt_asterisk {
+#yedjiugajy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jmvgawosyk .gt_indent_1 {
+#yedjiugajy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jmvgawosyk .gt_indent_2 {
+#yedjiugajy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jmvgawosyk .gt_indent_3 {
+#yedjiugajy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jmvgawosyk .gt_indent_4 {
+#yedjiugajy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jmvgawosyk .gt_indent_5 {
+#yedjiugajy .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1185,7 +1187,8 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
 </div>
 </div>
 </div>
-<p>Write and upload a <code>.rds</code> file to Google Drive</p>
+<p><br>
+Write and upload a <code>.rds</code> file to Google Drive</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
@@ -1194,49 +1197,50 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_deauth</span>() </span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># # Write and upload a .rds file to Google Drive</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># # THIS DOES NOT WORK ON GITHUB ACTIONS, but it does work Non-interactive locally (with real GOOGLE_API_KEY)</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") </span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># googledrive::drive_auth(email ="lorenzenmail@gmail.com")</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># file |&gt; </span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |&gt;</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   readr::write_rds("test_rds_upload.rds")</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># folder_upload_url &lt;- "https://drive.google.com/drive/folders/1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4?usp=drive_link"</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># folder_upload_id &lt;- "1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4"</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># googledrive::drive_put("test_rds_upload.rds", path = as_id(folder_upload_id)) # upload file</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># # This did not work with url id's!! ?????????</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># # Write and upload a .rds file to Google Drive</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># file |&gt; </span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   dplyr::mutate(Remarks = paste("Table in rds written at ", Sys.time())) |&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#   readr::write_rds("test_rds_upload.rds")</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># folder_upload_url &lt;- "https://drive.google.com/drive/folders/1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4?usp=drive_link"</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># folder_upload_id &lt;- "1ZJLxPSmOjbPiXn6OQ_JK1CPA40l8fNe4"</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># googledrive::drive_put("test_rds_upload.rds", path = as_id(folder_upload_id)) # upload file</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># file_upload_url &lt;- "https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw007wG/view?usp=drive_link"</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># googledrive::drive_put("test_rds_upload.rds", path = as_id(file_upload_url)) # upload file</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and read the newly written public shared .rds file from Google Drive</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>file_upload_url <span class="ot">&lt;-</span> <span class="st">"https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw007wG/view?usp=drive_link"</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="fu">as_id</span>(file_upload_url), <span class="at">path =</span> <span class="st">"test_rds_upload.rds"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>) <span class="co"># download file again</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_rds</span>(<span class="st">"test_rds_upload.rds"</span>) <span class="co"># read file</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and read the newly written public shared .rds file from Google Drive</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>file_upload_url <span class="ot">&lt;-</span> <span class="st">"https://drive.google.com/file/d/1voHotEwiiGGi-nc_HrMkw6Cmitw007wG/view?usp=drive_link"</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="fu">as_id</span>(file_upload_url), <span class="at">path =</span> <span class="st">"test_rds_upload.rds"</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>) <span class="co"># download file again</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_rds</span>(<span class="st">"test_rds_upload.rds"</span>) <span class="co"># read file</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<div id="gfydznhkzh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gfydznhkzh table {
+<div id="gjrmyfwlcs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gjrmyfwlcs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gfydznhkzh thead, #gfydznhkzh tbody, #gfydznhkzh tfoot, #gfydznhkzh tr, #gfydznhkzh td, #gfydznhkzh th {
+#gjrmyfwlcs thead, #gjrmyfwlcs tbody, #gjrmyfwlcs tfoot, #gjrmyfwlcs tr, #gjrmyfwlcs td, #gjrmyfwlcs th {
   border-style: none;
 }
 
-#gfydznhkzh p {
+#gjrmyfwlcs p {
   margin: 0;
   padding: 0;
 }
 
-#gfydznhkzh .gt_table {
+#gjrmyfwlcs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1262,12 +1266,12 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-left-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_caption {
+#gjrmyfwlcs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gfydznhkzh .gt_title {
+#gjrmyfwlcs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1279,7 +1283,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-width: 0;
 }
 
-#gfydznhkzh .gt_subtitle {
+#gjrmyfwlcs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1291,7 +1295,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-top-width: 0;
 }
 
-#gfydznhkzh .gt_heading {
+#gjrmyfwlcs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1303,13 +1307,13 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_bottom_border {
+#gjrmyfwlcs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_col_headings {
+#gjrmyfwlcs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1324,7 +1328,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_col_heading {
+#gjrmyfwlcs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1344,7 +1348,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   overflow-x: hidden;
 }
 
-#gfydznhkzh .gt_column_spanner_outer {
+#gjrmyfwlcs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1356,15 +1360,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 4px;
 }
 
-#gfydznhkzh .gt_column_spanner_outer:first-child {
+#gjrmyfwlcs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gfydznhkzh .gt_column_spanner_outer:last-child {
+#gjrmyfwlcs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gfydznhkzh .gt_column_spanner {
+#gjrmyfwlcs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1376,11 +1380,11 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   width: 100%;
 }
 
-#gfydznhkzh .gt_spanner_row {
+#gjrmyfwlcs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gfydznhkzh .gt_group_heading {
+#gjrmyfwlcs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1406,7 +1410,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   text-align: left;
 }
 
-#gfydznhkzh .gt_empty_group_heading {
+#gjrmyfwlcs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1421,15 +1425,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   vertical-align: middle;
 }
 
-#gfydznhkzh .gt_from_md > :first-child {
+#gjrmyfwlcs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gfydznhkzh .gt_from_md > :last-child {
+#gjrmyfwlcs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gfydznhkzh .gt_row {
+#gjrmyfwlcs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1448,7 +1452,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   overflow-x: hidden;
 }
 
-#gfydznhkzh .gt_stub {
+#gjrmyfwlcs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1461,7 +1465,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#gfydznhkzh .gt_stub_row_group {
+#gjrmyfwlcs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1475,15 +1479,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   vertical-align: top;
 }
 
-#gfydznhkzh .gt_row_group_first td {
+#gjrmyfwlcs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gfydznhkzh .gt_row_group_first th {
+#gjrmyfwlcs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gfydznhkzh .gt_summary_row {
+#gjrmyfwlcs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1493,16 +1497,16 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#gfydznhkzh .gt_first_summary_row {
+#gjrmyfwlcs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_first_summary_row.thick {
+#gjrmyfwlcs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gfydznhkzh .gt_last_summary_row {
+#gjrmyfwlcs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1512,7 +1516,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_grand_summary_row {
+#gjrmyfwlcs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1522,7 +1526,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#gfydznhkzh .gt_first_grand_summary_row {
+#gjrmyfwlcs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1532,7 +1536,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-top-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_last_grand_summary_row_top {
+#gjrmyfwlcs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1542,11 +1546,11 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_striped {
+#gjrmyfwlcs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gfydznhkzh .gt_table_body {
+#gjrmyfwlcs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1555,7 +1559,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_footnotes {
+#gjrmyfwlcs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1569,7 +1573,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_footnote {
+#gjrmyfwlcs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1578,7 +1582,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#gfydznhkzh .gt_sourcenotes {
+#gjrmyfwlcs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1592,7 +1596,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#gfydznhkzh .gt_sourcenote {
+#gjrmyfwlcs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1600,63 +1604,63 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#gfydznhkzh .gt_left {
+#gjrmyfwlcs .gt_left {
   text-align: left;
 }
 
-#gfydznhkzh .gt_center {
+#gjrmyfwlcs .gt_center {
   text-align: center;
 }
 
-#gfydznhkzh .gt_right {
+#gjrmyfwlcs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gfydznhkzh .gt_font_normal {
+#gjrmyfwlcs .gt_font_normal {
   font-weight: normal;
 }
 
-#gfydznhkzh .gt_font_bold {
+#gjrmyfwlcs .gt_font_bold {
   font-weight: bold;
 }
 
-#gfydznhkzh .gt_font_italic {
+#gjrmyfwlcs .gt_font_italic {
   font-style: italic;
 }
 
-#gfydznhkzh .gt_super {
+#gjrmyfwlcs .gt_super {
   font-size: 65%;
 }
 
-#gfydznhkzh .gt_footnote_marks {
+#gjrmyfwlcs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gfydznhkzh .gt_asterisk {
+#gjrmyfwlcs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gfydznhkzh .gt_indent_1 {
+#gjrmyfwlcs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gfydznhkzh .gt_indent_2 {
+#gjrmyfwlcs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gfydznhkzh .gt_indent_3 {
+#gjrmyfwlcs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gfydznhkzh .gt_indent_4 {
+#gjrmyfwlcs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gfydznhkzh .gt_indent_5 {
+#gjrmyfwlcs .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1718,23 +1722,23 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<div id="catddklwpb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#catddklwpb table {
+<div id="ndtykrdnrz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ndtykrdnrz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#catddklwpb thead, #catddklwpb tbody, #catddklwpb tfoot, #catddklwpb tr, #catddklwpb td, #catddklwpb th {
+#ndtykrdnrz thead, #ndtykrdnrz tbody, #ndtykrdnrz tfoot, #ndtykrdnrz tr, #ndtykrdnrz td, #ndtykrdnrz th {
   border-style: none;
 }
 
-#catddklwpb p {
+#ndtykrdnrz p {
   margin: 0;
   padding: 0;
 }
 
-#catddklwpb .gt_table {
+#ndtykrdnrz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1760,12 +1764,12 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-left-color: #D3D3D3;
 }
 
-#catddklwpb .gt_caption {
+#ndtykrdnrz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#catddklwpb .gt_title {
+#ndtykrdnrz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1777,7 +1781,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-width: 0;
 }
 
-#catddklwpb .gt_subtitle {
+#ndtykrdnrz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1789,7 +1793,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-top-width: 0;
 }
 
-#catddklwpb .gt_heading {
+#ndtykrdnrz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1801,13 +1805,13 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#catddklwpb .gt_bottom_border {
+#ndtykrdnrz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#catddklwpb .gt_col_headings {
+#ndtykrdnrz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1822,7 +1826,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#catddklwpb .gt_col_heading {
+#ndtykrdnrz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1842,7 +1846,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   overflow-x: hidden;
 }
 
-#catddklwpb .gt_column_spanner_outer {
+#ndtykrdnrz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1854,15 +1858,15 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 4px;
 }
 
-#catddklwpb .gt_column_spanner_outer:first-child {
+#ndtykrdnrz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#catddklwpb .gt_column_spanner_outer:last-child {
+#ndtykrdnrz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#catddklwpb .gt_column_spanner {
+#ndtykrdnrz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1874,11 +1878,11 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   width: 100%;
 }
 
-#catddklwpb .gt_spanner_row {
+#ndtykrdnrz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#catddklwpb .gt_group_heading {
+#ndtykrdnrz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1904,7 +1908,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   text-align: left;
 }
 
-#catddklwpb .gt_empty_group_heading {
+#ndtykrdnrz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1919,15 +1923,15 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   vertical-align: middle;
 }
 
-#catddklwpb .gt_from_md > :first-child {
+#ndtykrdnrz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#catddklwpb .gt_from_md > :last-child {
+#ndtykrdnrz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#catddklwpb .gt_row {
+#ndtykrdnrz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1946,7 +1950,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   overflow-x: hidden;
 }
 
-#catddklwpb .gt_stub {
+#ndtykrdnrz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1959,7 +1963,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#catddklwpb .gt_stub_row_group {
+#ndtykrdnrz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1973,15 +1977,15 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   vertical-align: top;
 }
 
-#catddklwpb .gt_row_group_first td {
+#ndtykrdnrz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#catddklwpb .gt_row_group_first th {
+#ndtykrdnrz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#catddklwpb .gt_summary_row {
+#ndtykrdnrz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1991,16 +1995,16 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#catddklwpb .gt_first_summary_row {
+#ndtykrdnrz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#catddklwpb .gt_first_summary_row.thick {
+#ndtykrdnrz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#catddklwpb .gt_last_summary_row {
+#ndtykrdnrz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2010,7 +2014,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#catddklwpb .gt_grand_summary_row {
+#ndtykrdnrz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2020,7 +2024,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#catddklwpb .gt_first_grand_summary_row {
+#ndtykrdnrz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2030,7 +2034,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-top-color: #D3D3D3;
 }
 
-#catddklwpb .gt_last_grand_summary_row_top {
+#ndtykrdnrz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2040,11 +2044,11 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#catddklwpb .gt_striped {
+#ndtykrdnrz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#catddklwpb .gt_table_body {
+#ndtykrdnrz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2053,7 +2057,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#catddklwpb .gt_footnotes {
+#ndtykrdnrz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2067,7 +2071,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#catddklwpb .gt_footnote {
+#ndtykrdnrz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2076,7 +2080,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#catddklwpb .gt_sourcenotes {
+#ndtykrdnrz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2090,7 +2094,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#catddklwpb .gt_sourcenote {
+#ndtykrdnrz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2098,63 +2102,63 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#catddklwpb .gt_left {
+#ndtykrdnrz .gt_left {
   text-align: left;
 }
 
-#catddklwpb .gt_center {
+#ndtykrdnrz .gt_center {
   text-align: center;
 }
 
-#catddklwpb .gt_right {
+#ndtykrdnrz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#catddklwpb .gt_font_normal {
+#ndtykrdnrz .gt_font_normal {
   font-weight: normal;
 }
 
-#catddklwpb .gt_font_bold {
+#ndtykrdnrz .gt_font_bold {
   font-weight: bold;
 }
 
-#catddklwpb .gt_font_italic {
+#ndtykrdnrz .gt_font_italic {
   font-style: italic;
 }
 
-#catddklwpb .gt_super {
+#ndtykrdnrz .gt_super {
   font-size: 65%;
 }
 
-#catddklwpb .gt_footnote_marks {
+#ndtykrdnrz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#catddklwpb .gt_asterisk {
+#ndtykrdnrz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#catddklwpb .gt_indent_1 {
+#ndtykrdnrz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#catddklwpb .gt_indent_2 {
+#ndtykrdnrz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#catddklwpb .gt_indent_3 {
+#ndtykrdnrz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#catddklwpb .gt_indent_4 {
+#ndtykrdnrz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#catddklwpb .gt_indent_5 {
+#ndtykrdnrz .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2262,27 +2266,27 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">opt_interactive</span>(<span class="at">page_size_default =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span></span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">cols_width</span>(</span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    temp_F <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">100</span>),</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    rain_prob <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">100</span>)</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    temp_F <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">120</span>),</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    rain_prob <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">120</span>)</span>
 <span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="cfcnfrrnws" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cfcnfrrnws table {
+<div id="ekyuoorpai" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ekyuoorpai table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cfcnfrrnws thead, #cfcnfrrnws tbody, #cfcnfrrnws tfoot, #cfcnfrrnws tr, #cfcnfrrnws td, #cfcnfrrnws th {
+#ekyuoorpai thead, #ekyuoorpai tbody, #ekyuoorpai tfoot, #ekyuoorpai tr, #ekyuoorpai td, #ekyuoorpai th {
   border-style: none;
 }
 
-#cfcnfrrnws p {
+#ekyuoorpai p {
   margin: 0;
   padding: 0;
 }
 
-#cfcnfrrnws .gt_table {
+#ekyuoorpai .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2308,12 +2312,12 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-left-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_caption {
+#ekyuoorpai .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cfcnfrrnws .gt_title {
+#ekyuoorpai .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2325,7 +2329,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-width: 0;
 }
 
-#cfcnfrrnws .gt_subtitle {
+#ekyuoorpai .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2337,7 +2341,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-top-width: 0;
 }
 
-#cfcnfrrnws .gt_heading {
+#ekyuoorpai .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2349,13 +2353,13 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_bottom_border {
+#ekyuoorpai .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_col_headings {
+#ekyuoorpai .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2370,7 +2374,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_col_heading {
+#ekyuoorpai .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2390,7 +2394,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   overflow-x: hidden;
 }
 
-#cfcnfrrnws .gt_column_spanner_outer {
+#ekyuoorpai .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2402,15 +2406,15 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 4px;
 }
 
-#cfcnfrrnws .gt_column_spanner_outer:first-child {
+#ekyuoorpai .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cfcnfrrnws .gt_column_spanner_outer:last-child {
+#ekyuoorpai .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cfcnfrrnws .gt_column_spanner {
+#ekyuoorpai .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2422,11 +2426,11 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   width: 100%;
 }
 
-#cfcnfrrnws .gt_spanner_row {
+#ekyuoorpai .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cfcnfrrnws .gt_group_heading {
+#ekyuoorpai .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2452,7 +2456,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   text-align: left;
 }
 
-#cfcnfrrnws .gt_empty_group_heading {
+#ekyuoorpai .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2467,15 +2471,15 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   vertical-align: middle;
 }
 
-#cfcnfrrnws .gt_from_md > :first-child {
+#ekyuoorpai .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cfcnfrrnws .gt_from_md > :last-child {
+#ekyuoorpai .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cfcnfrrnws .gt_row {
+#ekyuoorpai .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2494,7 +2498,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   overflow-x: hidden;
 }
 
-#cfcnfrrnws .gt_stub {
+#ekyuoorpai .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2507,7 +2511,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cfcnfrrnws .gt_stub_row_group {
+#ekyuoorpai .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2521,15 +2525,15 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   vertical-align: top;
 }
 
-#cfcnfrrnws .gt_row_group_first td {
+#ekyuoorpai .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cfcnfrrnws .gt_row_group_first th {
+#ekyuoorpai .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cfcnfrrnws .gt_summary_row {
+#ekyuoorpai .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2539,16 +2543,16 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cfcnfrrnws .gt_first_summary_row {
+#ekyuoorpai .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_first_summary_row.thick {
+#ekyuoorpai .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cfcnfrrnws .gt_last_summary_row {
+#ekyuoorpai .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2558,7 +2562,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_grand_summary_row {
+#ekyuoorpai .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2568,7 +2572,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cfcnfrrnws .gt_first_grand_summary_row {
+#ekyuoorpai .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2578,7 +2582,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-top-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_last_grand_summary_row_top {
+#ekyuoorpai .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2588,11 +2592,11 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_striped {
+#ekyuoorpai .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cfcnfrrnws .gt_table_body {
+#ekyuoorpai .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2601,7 +2605,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_footnotes {
+#ekyuoorpai .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2615,7 +2619,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_footnote {
+#ekyuoorpai .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2624,7 +2628,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cfcnfrrnws .gt_sourcenotes {
+#ekyuoorpai .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2638,7 +2642,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cfcnfrrnws .gt_sourcenote {
+#ekyuoorpai .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2646,125 +2650,71 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cfcnfrrnws .gt_left {
+#ekyuoorpai .gt_left {
   text-align: left;
 }
 
-#cfcnfrrnws .gt_center {
+#ekyuoorpai .gt_center {
   text-align: center;
 }
 
-#cfcnfrrnws .gt_right {
+#ekyuoorpai .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cfcnfrrnws .gt_font_normal {
+#ekyuoorpai .gt_font_normal {
   font-weight: normal;
 }
 
-#cfcnfrrnws .gt_font_bold {
+#ekyuoorpai .gt_font_bold {
   font-weight: bold;
 }
 
-#cfcnfrrnws .gt_font_italic {
+#ekyuoorpai .gt_font_italic {
   font-style: italic;
 }
 
-#cfcnfrrnws .gt_super {
+#ekyuoorpai .gt_super {
   font-size: 65%;
 }
 
-#cfcnfrrnws .gt_footnote_marks {
+#ekyuoorpai .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cfcnfrrnws .gt_asterisk {
+#ekyuoorpai .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cfcnfrrnws .gt_indent_1 {
+#ekyuoorpai .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cfcnfrrnws .gt_indent_2 {
+#ekyuoorpai .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cfcnfrrnws .gt_indent_3 {
+#ekyuoorpai .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cfcnfrrnws .gt_indent_4 {
+#ekyuoorpai .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cfcnfrrnws .gt_indent_5 {
+#ekyuoorpai .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<div id="cfcnfrrnws" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="cfcnfrrnws">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"time":["2024-03-08T15:00:00Z","2024-03-08T16:00:00Z","2024-03-08T17:00:00Z","2024-03-08T18:00:00Z","2024-03-08T19:00:00Z","2024-03-08T20:00:00Z","2024-03-08T21:00:00Z","2024-03-08T22:00:00Z","2024-03-08T23:00:00Z","2024-03-09T00:00:00Z","2024-03-09T01:00:00Z","2024-03-09T02:00:00Z","2024-03-09T03:00:00Z","2024-03-09T04:00:00Z","2024-03-09T05:00:00Z","2024-03-09T06:00:00Z","2024-03-09T07:00:00Z","2024-03-09T08:00:00Z","2024-03-09T09:00:00Z","2024-03-09T10:00:00Z","2024-03-09T11:00:00Z","2024-03-09T12:00:00Z","2024-03-09T13:00:00Z","2024-03-09T14:00:00Z","2024-03-09T15:00:00Z","2024-03-09T16:00:00Z","2024-03-09T17:00:00Z","2024-03-09T18:00:00Z","2024-03-09T19:00:00Z","2024-03-09T20:00:00Z","2024-03-09T21:00:00Z","2024-03-09T22:00:00Z","2024-03-09T23:00:00Z","2024-03-10T00:00:00Z","2024-03-10T01:00:00Z","2024-03-10T02:00:00Z","2024-03-10T03:00:00Z","2024-03-10T04:00:00Z","2024-03-10T05:00:00Z","2024-03-10T06:00:00Z","2024-03-10T07:00:00Z","2024-03-10T08:00:00Z","2024-03-10T09:00:00Z","2024-03-10T10:00:00Z","2024-03-10T11:00:00Z","2024-03-10T12:00:00Z","2024-03-10T13:00:00Z","2024-03-10T14:00:00Z","2024-03-10T15:00:00Z","2024-03-10T16:00:00Z","2024-03-10T17:00:00Z","2024-03-10T18:00:00Z","2024-03-10T19:00:00Z","2024-03-10T20:00:00Z","2024-03-10T21:00:00Z","2024-03-10T22:00:00Z","2024-03-10T23:00:00Z","2024-03-11T00:00:00Z","2024-03-11T01:00:00Z","2024-03-11T02:00:00Z","2024-03-11T03:00:00Z","2024-03-11T04:00:00Z","2024-03-11T05:00:00Z","2024-03-11T06:00:00Z","2024-03-11T07:00:00Z","2024-03-11T08:00:00Z","2024-03-11T09:00:00Z","2024-03-11T10:00:00Z","2024-03-11T11:00:00Z","2024-03-11T12:00:00Z","2024-03-11T13:00:00Z","2024-03-11T14:00:00Z","2024-03-11T15:00:00Z","2024-03-11T16:00:00Z","2024-03-11T17:00:00Z","2024-03-11T18:00:00Z","2024-03-11T19:00:00Z","2024-03-11T20:00:00Z","2024-03-11T21:00:00Z","2024-03-11T22:00:00Z","2024-03-11T23:00:00Z","2024-03-12T00:00:00Z","2024-03-12T01:00:00Z","2024-03-12T02:00:00Z","2024-03-12T03:00:00Z","2024-03-12T04:00:00Z","2024-03-12T05:00:00Z","2024-03-12T06:00:00Z","2024-03-12T07:00:00Z","2024-03-12T08:00:00Z","2024-03-12T09:00:00Z","2024-03-12T10:00:00Z","2024-03-12T11:00:00Z","2024-03-12T12:00:00Z","2024-03-12T13:00:00Z","2024-03-12T14:00:00Z","2024-03-12T15:00:00Z","2024-03-12T16:00:00Z","2024-03-12T17:00:00Z","2024-03-12T18:00:00Z","2024-03-12T19:00:00Z","2024-03-12T20:00:00Z","2024-03-12T21:00:00Z","2024-03-12T22:00:00Z","2024-03-12T23:00:00Z","2024-03-13T00:00:00Z","2024-03-13T01:00:00Z","2024-03-13T02:00:00Z","2024-03-13T03:00:00Z","2024-03-13T04:00:00Z","2024-03-13T05:00:00Z","2024-03-13T06:00:00Z","2024-03-13T07:00:00Z","2024-03-13T08:00:00Z","2024-03-13T09:00:00Z","2024-03-13T10:00:00Z","2024-03-13T11:00:00Z","2024-03-13T12:00:00Z","2024-03-13T13:00:00Z","2024-03-13T14:00:00Z","2024-03-13T15:00:00Z","2024-03-13T16:00:00Z","2024-03-13T17:00:00Z","2024-03-13T18:00:00Z","2024-03-13T19:00:00Z","2024-03-13T20:00:00Z","2024-03-13T21:00:00Z","2024-03-13T22:00:00Z","2024-03-13T23:00:00Z","2024-03-14T00:00:00Z","2024-03-14T01:00:00Z","2024-03-14T02:00:00Z","2024-03-14T03:00:00Z","2024-03-14T04:00:00Z","2024-03-14T05:00:00Z","2024-03-14T06:00:00Z","2024-03-14T07:00:00Z","2024-03-14T08:00:00Z","2024-03-14T09:00:00Z","2024-03-14T10:00:00Z","2024-03-14T11:00:00Z","2024-03-14T12:00:00Z","2024-03-14T13:00:00Z","2024-03-14T14:00:00Z","2024-03-14T15:00:00Z","2024-03-14T16:00:00Z","2024-03-14T17:00:00Z","2024-03-14T18:00:00Z","2024-03-14T19:00:00Z","2024-03-14T20:00:00Z","2024-03-14T21:00:00Z","2024-03-14T22:00:00Z","2024-03-14T23:00:00Z","2024-03-15T00:00:00Z","2024-03-15T01:00:00Z","2024-03-15T02:00:00Z"],"temp_F":[45,47,49,51,53,53,53,52,50,49,48,47,46,45,44,43,42,41,41,40,40,40,42,44,46,48,49,51,52,52,52,51,50,50,49,49,48,48,47,47,46,46,45,45,45,45,46,47,48,49,50,46,43,40,47,45,43,42,40,39,38,38,37,36,36,35,35,35,35,36,37,38,40,42,44,45,46,47,46,45,44,43,43,42,41,41,40,40,39,39,39,38,38,39,40,42,45,48,50,52,54,55,54,54,53,51,49,48,46,45,44,43,42,41,41,40,40,41,42,45,48,51,53,55,56,57,57,56,54,52,51,49,48,47,47,47,46,45,45,44,44,45,47,49,52,54,56,58,59,59,59,58,57,55,54,53],"rain_prob":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,10,10,10,10,10,10,72,72,72,72,72,72,99,99,99,99,99,99,76,76,76,76,76,76,19,19,19,19,19,19,30,30,30,30,30,30,3,3,3,3,3,3,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,3,3,3,3,3,3,4,4,4,4,4,4,3,3,3,3,3,3,5,5,5,5,5,5,12,12,12],"forecast":["Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Sunny","Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Partly Cloudy","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Mostly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy"]},"columns":[{"id":"time","name":"time","type":"Date","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["2024-03-08 15:00:00","2024-03-08 16:00:00","2024-03-08 17:00:00","2024-03-08 18:00:00","2024-03-08 19:00:00","2024-03-08 20:00:00","2024-03-08 21:00:00","2024-03-08 22:00:00","2024-03-08 23:00:00","2024-03-09","2024-03-09 01:00:00","2024-03-09 02:00:00","2024-03-09 03:00:00","2024-03-09 04:00:00","2024-03-09 05:00:00","2024-03-09 06:00:00","2024-03-09 07:00:00","2024-03-09 08:00:00","2024-03-09 09:00:00","2024-03-09 10:00:00","2024-03-09 11:00:00","2024-03-09 12:00:00","2024-03-09 13:00:00","2024-03-09 14:00:00","2024-03-09 15:00:00","2024-03-09 16:00:00","2024-03-09 17:00:00","2024-03-09 18:00:00","2024-03-09 19:00:00","2024-03-09 20:00:00","2024-03-09 21:00:00","2024-03-09 22:00:00","2024-03-09 23:00:00","2024-03-10","2024-03-10 01:00:00","2024-03-10 02:00:00","2024-03-10 03:00:00","2024-03-10 04:00:00","2024-03-10 05:00:00","2024-03-10 06:00:00","2024-03-10 07:00:00","2024-03-10 08:00:00","2024-03-10 09:00:00","2024-03-10 10:00:00","2024-03-10 11:00:00","2024-03-10 12:00:00","2024-03-10 13:00:00","2024-03-10 14:00:00","2024-03-10 15:00:00","2024-03-10 16:00:00","2024-03-10 17:00:00","2024-03-10 18:00:00","2024-03-10 19:00:00","2024-03-10 20:00:00","2024-03-10 21:00:00","2024-03-10 22:00:00","2024-03-10 23:00:00","2024-03-11","2024-03-11 01:00:00","2024-03-11 02:00:00","2024-03-11 03:00:00","2024-03-11 04:00:00","2024-03-11 05:00:00","2024-03-11 06:00:00","2024-03-11 07:00:00","2024-03-11 08:00:00","2024-03-11 09:00:00","2024-03-11 10:00:00","2024-03-11 11:00:00","2024-03-11 12:00:00","2024-03-11 13:00:00","2024-03-11 14:00:00","2024-03-11 15:00:00","2024-03-11 16:00:00","2024-03-11 17:00:00","2024-03-11 18:00:00","2024-03-11 19:00:00","2024-03-11 20:00:00","2024-03-11 21:00:00","2024-03-11 22:00:00","2024-03-11 23:00:00","2024-03-12","2024-03-12 01:00:00","2024-03-12 02:00:00","2024-03-12 03:00:00","2024-03-12 04:00:00","2024-03-12 05:00:00","2024-03-12 06:00:00","2024-03-12 07:00:00","2024-03-12 08:00:00","2024-03-12 09:00:00","2024-03-12 10:00:00","2024-03-12 11:00:00","2024-03-12 12:00:00","2024-03-12 13:00:00","2024-03-12 14:00:00","2024-03-12 15:00:00","2024-03-12 16:00:00","2024-03-12 17:00:00","2024-03-12 18:00:00","2024-03-12 19:00:00","2024-03-12 20:00:00","2024-03-12 21:00:00","2024-03-12 22:00:00","2024-03-12 23:00:00","2024-03-13","2024-03-13 01:00:00","2024-03-13 02:00:00","2024-03-13 03:00:00","2024-03-13 04:00:00","2024-03-13 05:00:00","2024-03-13 06:00:00","2024-03-13 07:00:00","2024-03-13 08:00:00","2024-03-13 09:00:00","2024-03-13 10:00:00","2024-03-13 11:00:00","2024-03-13 12:00:00","2024-03-13 13:00:00","2024-03-13 14:00:00","2024-03-13 15:00:00","2024-03-13 16:00:00","2024-03-13 17:00:00","2024-03-13 18:00:00","2024-03-13 19:00:00","2024-03-13 20:00:00","2024-03-13 21:00:00","2024-03-13 22:00:00","2024-03-13 23:00:00","2024-03-14","2024-03-14 01:00:00","2024-03-14 02:00:00","2024-03-14 03:00:00","2024-03-14 04:00:00","2024-03-14 05:00:00","2024-03-14 06:00:00","2024-03-14 07:00:00","2024-03-14 08:00:00","2024-03-14 09:00:00","2024-03-14 10:00:00","2024-03-14 11:00:00","2024-03-14 12:00:00","2024-03-14 13:00:00","2024-03-14 14:00:00","2024-03-14 15:00:00","2024-03-14 16:00:00","2024-03-14 17:00:00","2024-03-14 18:00:00","2024-03-14 19:00:00","2024-03-14 20:00:00","2024-03-14 21:00:00","2024-03-14 22:00:00","2024-03-14 23:00:00","2024-03-15","2024-03-15 01:00:00","2024-03-15 02:00:00"],"html":true,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"temp_F","name":"temp_F","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["45","47","49","51","53","53","53","52","50","49","48","47","46","45","44","43","42","41","41","40","40","40","42","44","46","48","49","51","52","52","52","51","50","50","49","49","48","48","47","47","46","46","45","45","45","45","46","47","48","49","50","46","43","40","47","45","43","42","40","39","38","38","37","36","36","35","35","35","35","36","37","38","40","42","44","45","46","47","46","45","44","43","43","42","41","41","40","40","39","39","39","38","38","39","40","42","45","48","50","52","54","55","54","54","53","51","49","48","46","45","44","43","42","41","41","40","40","41","42","45","48","51","53","55","56","57","57","56","54","52","51","49","48","47","47","47","46","45","45","44","44","45","47","49","52","54","56","58","59","59","59","58","57","55","54","53"],"html":true,"width":100,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"rain_prob","name":"rain_prob","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","1","10","10","10","10","10","10","72","72","72","72","72","72","99","99","99","99","99","99","76","76","76","76","76","76","19","19","19","19","19","19","30","30","30","30","30","30","3","3","3","3","3","3","1","1","1","1","1","1","2","2","2","2","2","2","2","2","2","2","2","2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","1","1","1","1","1","1","1","1","1","1","1","3","3","3","3","3","3","4","4","4","4","4","4","3","3","3","3","3","3","5","5","5","5","5","5","12","12","12"],"html":true,"width":100,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"forecast","name":"forecast","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Sunny","Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Cloudy","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Scattered Rain And Snow Showers","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Partly Cloudy","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Mostly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy","Mostly Cloudy"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"cfcnfrrnws","dataKey":"e853f63dcfe0c867878dedb7c16a70f7"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style"],"jsHooks":[]}</script>
+<div id="ekyuoorpai" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="ekyuoorpai">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"time":["2024-03-11T14:00:00Z","2024-03-11T15:00:00Z","2024-03-11T16:00:00Z","2024-03-11T17:00:00Z","2024-03-11T18:00:00Z","2024-03-11T19:00:00Z","2024-03-11T20:00:00Z","2024-03-11T21:00:00Z","2024-03-11T22:00:00Z","2024-03-11T23:00:00Z","2024-03-12T00:00:00Z","2024-03-12T01:00:00Z","2024-03-12T02:00:00Z","2024-03-12T03:00:00Z","2024-03-12T04:00:00Z","2024-03-12T05:00:00Z","2024-03-12T06:00:00Z","2024-03-12T07:00:00Z","2024-03-12T08:00:00Z","2024-03-12T09:00:00Z","2024-03-12T10:00:00Z","2024-03-12T11:00:00Z","2024-03-12T12:00:00Z","2024-03-12T13:00:00Z","2024-03-12T14:00:00Z","2024-03-12T15:00:00Z","2024-03-12T16:00:00Z","2024-03-12T17:00:00Z","2024-03-12T18:00:00Z","2024-03-12T19:00:00Z","2024-03-12T20:00:00Z","2024-03-12T21:00:00Z","2024-03-12T22:00:00Z","2024-03-12T23:00:00Z","2024-03-13T00:00:00Z","2024-03-13T01:00:00Z","2024-03-13T02:00:00Z","2024-03-13T03:00:00Z","2024-03-13T04:00:00Z","2024-03-13T05:00:00Z","2024-03-13T06:00:00Z","2024-03-13T07:00:00Z","2024-03-13T08:00:00Z","2024-03-13T09:00:00Z","2024-03-13T10:00:00Z","2024-03-13T11:00:00Z","2024-03-13T12:00:00Z","2024-03-13T13:00:00Z","2024-03-13T14:00:00Z","2024-03-13T15:00:00Z","2024-03-13T16:00:00Z","2024-03-13T17:00:00Z","2024-03-13T18:00:00Z","2024-03-13T19:00:00Z","2024-03-13T20:00:00Z","2024-03-13T21:00:00Z","2024-03-13T22:00:00Z","2024-03-13T23:00:00Z","2024-03-14T00:00:00Z","2024-03-14T01:00:00Z","2024-03-14T02:00:00Z","2024-03-14T03:00:00Z","2024-03-14T04:00:00Z","2024-03-14T05:00:00Z","2024-03-14T06:00:00Z","2024-03-14T07:00:00Z","2024-03-14T08:00:00Z","2024-03-14T09:00:00Z","2024-03-14T10:00:00Z","2024-03-14T11:00:00Z","2024-03-14T12:00:00Z","2024-03-14T13:00:00Z","2024-03-14T14:00:00Z","2024-03-14T15:00:00Z","2024-03-14T16:00:00Z","2024-03-14T17:00:00Z","2024-03-14T18:00:00Z","2024-03-14T19:00:00Z","2024-03-14T20:00:00Z","2024-03-14T21:00:00Z","2024-03-14T22:00:00Z","2024-03-14T23:00:00Z","2024-03-15T00:00:00Z","2024-03-15T01:00:00Z","2024-03-15T02:00:00Z","2024-03-15T03:00:00Z","2024-03-15T04:00:00Z","2024-03-15T05:00:00Z","2024-03-15T06:00:00Z","2024-03-15T07:00:00Z","2024-03-15T08:00:00Z","2024-03-15T09:00:00Z","2024-03-15T10:00:00Z","2024-03-15T11:00:00Z","2024-03-15T12:00:00Z","2024-03-15T13:00:00Z","2024-03-15T14:00:00Z","2024-03-15T15:00:00Z","2024-03-15T16:00:00Z","2024-03-15T17:00:00Z","2024-03-15T18:00:00Z","2024-03-15T19:00:00Z","2024-03-15T20:00:00Z","2024-03-15T21:00:00Z","2024-03-15T22:00:00Z","2024-03-15T23:00:00Z","2024-03-16T00:00:00Z","2024-03-16T01:00:00Z","2024-03-16T02:00:00Z","2024-03-16T03:00:00Z","2024-03-16T04:00:00Z","2024-03-16T05:00:00Z","2024-03-16T06:00:00Z","2024-03-16T07:00:00Z","2024-03-16T08:00:00Z","2024-03-16T09:00:00Z","2024-03-16T10:00:00Z","2024-03-16T11:00:00Z","2024-03-16T12:00:00Z","2024-03-16T13:00:00Z","2024-03-16T14:00:00Z","2024-03-16T15:00:00Z","2024-03-16T16:00:00Z","2024-03-16T17:00:00Z","2024-03-16T18:00:00Z","2024-03-16T19:00:00Z","2024-03-16T20:00:00Z","2024-03-16T21:00:00Z","2024-03-16T22:00:00Z","2024-03-16T23:00:00Z","2024-03-17T00:00:00Z","2024-03-17T01:00:00Z","2024-03-17T02:00:00Z","2024-03-17T03:00:00Z","2024-03-17T04:00:00Z","2024-03-17T05:00:00Z","2024-03-17T06:00:00Z","2024-03-17T07:00:00Z","2024-03-17T08:00:00Z","2024-03-17T09:00:00Z","2024-03-17T10:00:00Z","2024-03-17T11:00:00Z","2024-03-17T12:00:00Z","2024-03-17T13:00:00Z","2024-03-17T14:00:00Z","2024-03-17T15:00:00Z","2024-03-17T16:00:00Z","2024-03-17T17:00:00Z","2024-03-17T18:00:00Z","2024-03-17T19:00:00Z","2024-03-17T20:00:00Z","2024-03-17T21:00:00Z","2024-03-17T22:00:00Z","2024-03-17T23:00:00Z","2024-03-18T00:00:00Z","2024-03-18T01:00:00Z"],"temp_F":[39,41,42,44,47,48,48,49,48,46,45,44,44,42,41,41,40,39,39,38,39,38,39,43,46,49,52,55,58,59,60,60,58,57,55,53,52,51,49,48,47,47,46,45,45,44,44,47,50,54,57,61,63,64,64,63,62,60,58,57,56,54,53,52,51,50,49,48,47,47,47,50,53,55,58,61,63,64,65,65,64,62,60,59,58,57,56,55,54,53,53,52,51,51,51,53,55,57,59,60,62,63,63,63,61,59,58,56,55,54,53,52,51,50,49,48,47,47,47,49,50,52,53,55,56,57,57,57,56,55,53,52,52,51,50,49,48,48,47,47,46,46,46,48,49,51,53,55,56,57,57,57,56,54,53,52],"rain_prob":[2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,7,7,7,7,7,7,17,17,17,17,17,17,22,22,22,22,22,22,21,21,21,21,21,21,32,32,32,32,32,32,58,58,58,58,58,58,42,42,42,42,42,42,19,19,19,19,19,19,14,14,14,14,14,14,14,14,14,14,14,14,21,21,21,21,21,21,31,31,31,31,31,31,37,37,37,37,37,37,25,25],"forecast":["Partly Sunny","Partly Sunny","Mostly Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Sunny","Partly Sunny","Mostly Cloudy","Mostly Cloudy","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Light Rain","Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Partly Cloudy","Partly Cloudy","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain"]},"columns":[{"id":"time","name":"time","type":"Date","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["2024-03-11 14:00:00","2024-03-11 15:00:00","2024-03-11 16:00:00","2024-03-11 17:00:00","2024-03-11 18:00:00","2024-03-11 19:00:00","2024-03-11 20:00:00","2024-03-11 21:00:00","2024-03-11 22:00:00","2024-03-11 23:00:00","2024-03-12","2024-03-12 01:00:00","2024-03-12 02:00:00","2024-03-12 03:00:00","2024-03-12 04:00:00","2024-03-12 05:00:00","2024-03-12 06:00:00","2024-03-12 07:00:00","2024-03-12 08:00:00","2024-03-12 09:00:00","2024-03-12 10:00:00","2024-03-12 11:00:00","2024-03-12 12:00:00","2024-03-12 13:00:00","2024-03-12 14:00:00","2024-03-12 15:00:00","2024-03-12 16:00:00","2024-03-12 17:00:00","2024-03-12 18:00:00","2024-03-12 19:00:00","2024-03-12 20:00:00","2024-03-12 21:00:00","2024-03-12 22:00:00","2024-03-12 23:00:00","2024-03-13","2024-03-13 01:00:00","2024-03-13 02:00:00","2024-03-13 03:00:00","2024-03-13 04:00:00","2024-03-13 05:00:00","2024-03-13 06:00:00","2024-03-13 07:00:00","2024-03-13 08:00:00","2024-03-13 09:00:00","2024-03-13 10:00:00","2024-03-13 11:00:00","2024-03-13 12:00:00","2024-03-13 13:00:00","2024-03-13 14:00:00","2024-03-13 15:00:00","2024-03-13 16:00:00","2024-03-13 17:00:00","2024-03-13 18:00:00","2024-03-13 19:00:00","2024-03-13 20:00:00","2024-03-13 21:00:00","2024-03-13 22:00:00","2024-03-13 23:00:00","2024-03-14","2024-03-14 01:00:00","2024-03-14 02:00:00","2024-03-14 03:00:00","2024-03-14 04:00:00","2024-03-14 05:00:00","2024-03-14 06:00:00","2024-03-14 07:00:00","2024-03-14 08:00:00","2024-03-14 09:00:00","2024-03-14 10:00:00","2024-03-14 11:00:00","2024-03-14 12:00:00","2024-03-14 13:00:00","2024-03-14 14:00:00","2024-03-14 15:00:00","2024-03-14 16:00:00","2024-03-14 17:00:00","2024-03-14 18:00:00","2024-03-14 19:00:00","2024-03-14 20:00:00","2024-03-14 21:00:00","2024-03-14 22:00:00","2024-03-14 23:00:00","2024-03-15","2024-03-15 01:00:00","2024-03-15 02:00:00","2024-03-15 03:00:00","2024-03-15 04:00:00","2024-03-15 05:00:00","2024-03-15 06:00:00","2024-03-15 07:00:00","2024-03-15 08:00:00","2024-03-15 09:00:00","2024-03-15 10:00:00","2024-03-15 11:00:00","2024-03-15 12:00:00","2024-03-15 13:00:00","2024-03-15 14:00:00","2024-03-15 15:00:00","2024-03-15 16:00:00","2024-03-15 17:00:00","2024-03-15 18:00:00","2024-03-15 19:00:00","2024-03-15 20:00:00","2024-03-15 21:00:00","2024-03-15 22:00:00","2024-03-15 23:00:00","2024-03-16","2024-03-16 01:00:00","2024-03-16 02:00:00","2024-03-16 03:00:00","2024-03-16 04:00:00","2024-03-16 05:00:00","2024-03-16 06:00:00","2024-03-16 07:00:00","2024-03-16 08:00:00","2024-03-16 09:00:00","2024-03-16 10:00:00","2024-03-16 11:00:00","2024-03-16 12:00:00","2024-03-16 13:00:00","2024-03-16 14:00:00","2024-03-16 15:00:00","2024-03-16 16:00:00","2024-03-16 17:00:00","2024-03-16 18:00:00","2024-03-16 19:00:00","2024-03-16 20:00:00","2024-03-16 21:00:00","2024-03-16 22:00:00","2024-03-16 23:00:00","2024-03-17","2024-03-17 01:00:00","2024-03-17 02:00:00","2024-03-17 03:00:00","2024-03-17 04:00:00","2024-03-17 05:00:00","2024-03-17 06:00:00","2024-03-17 07:00:00","2024-03-17 08:00:00","2024-03-17 09:00:00","2024-03-17 10:00:00","2024-03-17 11:00:00","2024-03-17 12:00:00","2024-03-17 13:00:00","2024-03-17 14:00:00","2024-03-17 15:00:00","2024-03-17 16:00:00","2024-03-17 17:00:00","2024-03-17 18:00:00","2024-03-17 19:00:00","2024-03-17 20:00:00","2024-03-17 21:00:00","2024-03-17 22:00:00","2024-03-17 23:00:00","2024-03-18","2024-03-18 01:00:00"],"html":true,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"temp_F","name":"temp_F","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["39","41","42","44","47","48","48","49","48","46","45","44","44","42","41","41","40","39","39","38","39","38","39","43","46","49","52","55","58","59","60","60","58","57","55","53","52","51","49","48","47","47","46","45","45","44","44","47","50","54","57","61","63","64","64","63","62","60","58","57","56","54","53","52","51","50","49","48","47","47","47","50","53","55","58","61","63","64","65","65","64","62","60","59","58","57","56","55","54","53","53","52","51","51","51","53","55","57","59","60","62","63","63","63","61","59","58","56","55","54","53","52","51","50","49","48","47","47","47","49","50","52","53","55","56","57","57","57","56","55","53","52","52","51","50","49","48","48","47","47","46","46","46","48","49","51","53","55","56","57","57","57","56","54","53","52"],"html":true,"width":120,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"rain_prob","name":"rain_prob","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["2","2","2","2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","2","2","2","2","2","2","2","2","2","2","2","2","4","4","4","4","4","4","7","7","7","7","7","7","17","17","17","17","17","17","22","22","22","22","22","22","21","21","21","21","21","21","32","32","32","32","32","32","58","58","58","58","58","58","42","42","42","42","42","42","19","19","19","19","19","19","14","14","14","14","14","14","14","14","14","14","14","14","21","21","21","21","21","21","31","31","31","31","31","31","37","37","37","37","37","37","25","25"],"html":true,"width":120,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"forecast","name":"forecast","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["Partly Sunny","Partly Sunny","Mostly Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Sunny","Partly Sunny","Mostly Cloudy","Mostly Cloudy","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Rain Showers Likely","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Light Rain","Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Cloudy","Partly Cloudy","Partly Cloudy","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"ekyuoorpai","dataKey":"627ea47360fe691e1c439a37054844cb"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style"],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
-<p><br>
-Check authentication and de-authentication information</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get info on current user and Drive capabilities</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_user</span>() </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_about</span>() </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Edit and view auth configuration</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_oauth_client</span>()   <span class="co"># (client, path, api_key) the current user-configured OAuth client</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_api_key</span>()        <span class="co"># the current user-configured API key</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_auth_configure</span>() <span class="co"># An object of R6 class gargle::AuthState, invisibly</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_deauth</span>()  <span class="co"># Suspend authorization</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_auth</span>()    <span class="co"># Authorize googledrive</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_scopes</span>()  <span class="co"># Produce scopes specific to the Drive API</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Workflow to use Google Drive functions without interactive prompts</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_auth_configure</span>(<span class="at">api_key =</span> <span class="st">"GOOGLE_API_KEY"</span>)  </span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_auth</span>(<span class="at">email =</span><span class="st">"lorenzenmail@gmail.com"</span>)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can use Google Drive functions without interactive prompts</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: List files in your Drive</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="fu">drive_ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br>
-Read a googlesheet from private Google Drive</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googlesheets4)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Google Authentication</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>(</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">scopes =</span> <span class="st">"https://www.googleapis.com/auth/drive.readonly"</span>)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">gs4_auth</span>(<span class="at">token =</span> <span class="fu">drive_token</span>())</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Get Google Sheet ID</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>ss <span class="ot">&lt;-</span> googledrive<span class="sc">::</span><span class="fu">drive_get</span>(<span class="st">"hv8_planter_sheet"</span>)</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ss can be url???</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data from Google Sheet</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(ss, <span class="at">sheet =</span> <span class="st">"content"</span>)</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br>
-</p>
 
 
 
