@@ -114,4 +114,28 @@ ss <- googledrive::drive_get("hv8_planter_sheet")
 data <- googlesheets4::read_sheet(ss, sheet = "content")
 
 data |> gt()
+
+```
+
+
+\
+Download and read a PRIVATE `.xlsx` file from Google Drive\
+```{r}
+#| echo: true
+#| warning: false
+#| eval: false
+
+library(googledrive)
+library(readxl)
+library(gt)
+
+googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") 
+googledrive::drive_auth(email ="lorenzenmail@gmail.com")
+
+# code here
+
+file <- readxl::read_xlsx("test_xlsx_private.xlsx") # read file
+file |> gt() # print my datatable
+
+
 ```
