@@ -10,7 +10,6 @@ This Quarto Website was generated on GitHub `{r} Sys.time()` at `{r} Sys.timezon
 :::
 
 
-
 The following code is focused on connecting R on GitHub to external data sources **with no authorization**.
 
 I test R code to:
@@ -70,7 +69,7 @@ Download and read a public shared `.rds` file from Google Drive
 ```{r}
 #| echo: true
 #| warning: false
-#| eval: false
+#| eval: true
 
 library(googledrive)
 library(readr)
@@ -78,25 +77,25 @@ library(gt)
 
 #googledrive::drive_deauth()  # Without giving {googledrive} access to my Google account
 
-# # THIS WORKS WITH URL ID'S
-# file_url <- "https://drive.google.com/file/d/1tADUi-z8sH6B8ByvZKWXVMcSNVQUP2_H/view?usp=drive_link"
-# googledrive::drive_download(as_id(file_url), path = "test_rds.rds", overwrite = TRUE) # download file
+# THIS WORKS WITH URL ID'S
+file_url <- "https://drive.google.com/file/d/1tADUi-z8sH6B8ByvZKWXVMcSNVQUP2_H/view?usp=drive_link"
+googledrive::drive_download(as_id(file_url), path = "test_rds.rds", overwrite = TRUE) # download file
+
+file <- readr::read_rds("test_rds.rds") # read file
+file |> gt() # print my datatable
+
+
+# # THIS DOES NOT WORK ??? (GOOGLE_API_KEY IS IN SECRETS AND CALLED IN WORKFLOW) ???
+# # AND IT WORKS WHEN I RUN IT LOCALLY
+# googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") 
+# googledrive::drive_auth(email ="lorenzenmail@gmail.com")
 # 
-# file <- readr::read_rds("test_rds.rds") # read file
-# file |> gt() # print my datatable
-
-
-# THIS DOES NOT WORK ??? (GOOGLE_API_KEY IS IN SECRETS AND CALLED IN WORKFLOW) ???
-# AND IT WORKS WHEN I RUN IT LOCALLY
-googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") 
-googledrive::drive_auth(email ="lorenzenmail@gmail.com")
-
-public_file_metadata_rds <- 
-  googledrive::drive_get("test_rds.rds")
-googledrive::drive_download(public_file_metadata_rds, overwrite = TRUE) # download file
-
-file2 <- readr::read_rds("test_rds.rds") # read file
-file2 |> gt() # print my datatable
+# public_file_metadata_rds <- 
+#   googledrive::drive_get("test_rds.rds")
+# googledrive::drive_download(public_file_metadata_rds, overwrite = TRUE) # download file
+# 
+# file2 <- readr::read_rds("test_rds.rds") # read file
+# file2 |> gt() # print my datatable
 
 ```
 
