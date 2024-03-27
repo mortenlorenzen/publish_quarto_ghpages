@@ -2,7 +2,14 @@
 title: "Sandbox R code with no authorization"
 ---
 
-This Quarto website was rendered on GitHub **`{r} Sys.time()` at `{r} Sys.timezone()` time**.
+::: {.callout-note}
+
+## Last Update
+
+This Quarto Website was generated on GitHub `{r} Sys.time()` at `{r} Sys.timezone()` time.
+:::
+
+
 
 The following code is focused on connecting R on GitHub to external data sources **with no authorization**.
 
@@ -69,7 +76,7 @@ library(googledrive)
 library(readr)
 library(gt)
 
-googledrive::drive_deauth()  # Without giving {googledrive} access to my Google account
+#googledrive::drive_deauth()  # Without giving {googledrive} access to my Google account
 
 # # THIS WORKS WITH URL ID'S
 # file_url <- "https://drive.google.com/file/d/1tADUi-z8sH6B8ByvZKWXVMcSNVQUP2_H/view?usp=drive_link"
@@ -79,7 +86,8 @@ googledrive::drive_deauth()  # Without giving {googledrive} access to my Google 
 # file |> gt() # print my datatable
 
 
-
+# THIS DOES NOT WORK ??? (GOOGLE_API_KEY IS IN SECRETS AND CALLED IN WORKFLOW) ???
+# AND IT WORKS WHEN I RUN IT LOCALLY
 googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") 
 googledrive::drive_auth(email ="lorenzenmail@gmail.com")
 

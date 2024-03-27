@@ -2,7 +2,14 @@
 title: "Sandbox R code with authorization"
 ---
 
-This Quarto website was rendered on GitHub **`{r} Sys.time()` at `{r} Sys.timezone()` time**.
+
+::: {.callout-note}
+
+## Last Update
+
+This Quarto Website was generated on GitHub `{r} Sys.time()` at `{r} Sys.timezone()` time.
+:::
+
 
 The following code is focused on connecting R on GitHub to external data sources **with authorization**.
 
