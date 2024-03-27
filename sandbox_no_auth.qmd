@@ -70,7 +70,7 @@ Download and read a public shared `.rds` file from Google Drive
 ```{r}
 #| echo: true
 #| warning: false
-#| eval: true
+#| eval: false
 
 library(googledrive)
 library(readr)
