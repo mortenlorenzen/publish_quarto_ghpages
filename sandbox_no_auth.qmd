@@ -18,7 +18,7 @@ I test R code to:
 1. Download and read a public shared .`xlsx` file from Google Drive ✅ 
 1. Write and upload a `.rds` file to Google Drive
 1. Download and read a public shared `.rds` file from Google Drive ✅ 
-1. Read data from an external API, Star Wars ✅  - API IS DOWN!
+1. Read data from an external API, Star Wars ✅ 
 1. Read data from an external API, Weather forecast ✅ 
 
 
@@ -144,11 +144,11 @@ file |> gt() # print my datatable
 
 
 \
-Read data from an external API: [The Star Wars API](https://swapi.dev/) - API IS DOWN! therefore the code will not run - `eval: false`.
+Read data from an external API: [The Star Wars API](https://swapi.dev/)
 ```{r}
 #| echo: true
 #| warning: false
-#| eval: false
+#| eval: true
 
 library(httr2)
 library(tidyr)
