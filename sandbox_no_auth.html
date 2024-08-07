@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Run R code on GitHub - Sandbox R code with no authorization</title>
+<title>Sandbox R code with no authorization – Run R code on GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-note callout-titled" title="Last Update">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -191,7 +191,7 @@ Last Update
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This Quarto Website was generated on GitHub 2024-03-27 21:24:54.560473 at UTC time.</p>
+<p>This Quarto Website was generated on GitHub 2024-08-07 14:51:41.744937 at UTC time.</p>
 </div>
 </div>
 <p>The following code is focused on connecting R on GitHub to external data sources <strong>with no authorization</strong>.</p>
@@ -199,13 +199,13 @@ Last Update
 <ol type="1">
 <li>Read a public shared <code>googlesheet</code> from Google Drive ✅</li>
 <li>Download and read a public shared .<code>xlsx</code> file from Google Drive ✅</li>
-<li>Write and upload a <code>.rds</code> file to Google Drive</li>
 <li>Download and read a public shared <code>.rds</code> file from Google Drive ✅</li>
+<li>Write and upload a <code>.rds</code> file to Google Drive</li>
 <li>Read data from an external API, Star Wars ✅</li>
 <li>Read data from an external API, Weather forecast ✅</li>
 </ol>
 <p><br>
-Read a public shared <code>googlesheet</code> from Google Drive</p>
+1.Read a public shared <code>googlesheet</code> from Google Drive</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googlesheets4)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
@@ -217,24 +217,23 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>datatable <span class="sc">|&gt;</span> <span class="fu">gt</span>()                        <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<div id="dbwdlikncg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dbwdlikncg table {
+<div id="dpzoeowtau" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dpzoeowtau table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dbwdlikncg thead, #dbwdlikncg tbody, #dbwdlikncg tfoot, #dbwdlikncg tr, #dbwdlikncg td, #dbwdlikncg th {
+#dpzoeowtau thead, #dpzoeowtau tbody, #dpzoeowtau tfoot, #dpzoeowtau tr, #dpzoeowtau td, #dpzoeowtau th {
   border-style: none;
 }
 
-#dbwdlikncg p {
+#dpzoeowtau p {
   margin: 0;
   padding: 0;
 }
 
-#dbwdlikncg .gt_table {
+#dpzoeowtau .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -260,12 +259,12 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-left-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_caption {
+#dpzoeowtau .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dbwdlikncg .gt_title {
+#dpzoeowtau .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -277,7 +276,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-width: 0;
 }
 
-#dbwdlikncg .gt_subtitle {
+#dpzoeowtau .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -289,7 +288,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-top-width: 0;
 }
 
-#dbwdlikncg .gt_heading {
+#dpzoeowtau .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -301,13 +300,13 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_bottom_border {
+#dpzoeowtau .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_col_headings {
+#dpzoeowtau .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -322,7 +321,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_col_heading {
+#dpzoeowtau .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -342,7 +341,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   overflow-x: hidden;
 }
 
-#dbwdlikncg .gt_column_spanner_outer {
+#dpzoeowtau .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -354,15 +353,15 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 4px;
 }
 
-#dbwdlikncg .gt_column_spanner_outer:first-child {
+#dpzoeowtau .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dbwdlikncg .gt_column_spanner_outer:last-child {
+#dpzoeowtau .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dbwdlikncg .gt_column_spanner {
+#dpzoeowtau .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -374,11 +373,11 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   width: 100%;
 }
 
-#dbwdlikncg .gt_spanner_row {
+#dpzoeowtau .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dbwdlikncg .gt_group_heading {
+#dpzoeowtau .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -404,7 +403,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   text-align: left;
 }
 
-#dbwdlikncg .gt_empty_group_heading {
+#dpzoeowtau .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -419,15 +418,15 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   vertical-align: middle;
 }
 
-#dbwdlikncg .gt_from_md > :first-child {
+#dpzoeowtau .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dbwdlikncg .gt_from_md > :last-child {
+#dpzoeowtau .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dbwdlikncg .gt_row {
+#dpzoeowtau .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -446,7 +445,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   overflow-x: hidden;
 }
 
-#dbwdlikncg .gt_stub {
+#dpzoeowtau .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -459,7 +458,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#dbwdlikncg .gt_stub_row_group {
+#dpzoeowtau .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -473,15 +472,15 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   vertical-align: top;
 }
 
-#dbwdlikncg .gt_row_group_first td {
+#dpzoeowtau .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dbwdlikncg .gt_row_group_first th {
+#dpzoeowtau .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dbwdlikncg .gt_summary_row {
+#dpzoeowtau .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -491,16 +490,16 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#dbwdlikncg .gt_first_summary_row {
+#dpzoeowtau .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_first_summary_row.thick {
+#dpzoeowtau .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dbwdlikncg .gt_last_summary_row {
+#dpzoeowtau .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -510,7 +509,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_grand_summary_row {
+#dpzoeowtau .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -520,7 +519,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#dbwdlikncg .gt_first_grand_summary_row {
+#dpzoeowtau .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -530,7 +529,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-top-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_last_grand_summary_row_top {
+#dpzoeowtau .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -540,11 +539,11 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_striped {
+#dpzoeowtau .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dbwdlikncg .gt_table_body {
+#dpzoeowtau .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -553,7 +552,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_footnotes {
+#dpzoeowtau .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -567,7 +566,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_footnote {
+#dpzoeowtau .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -576,7 +575,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#dbwdlikncg .gt_sourcenotes {
+#dpzoeowtau .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -590,7 +589,7 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#dbwdlikncg .gt_sourcenote {
+#dpzoeowtau .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -598,68 +597,68 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
   padding-right: 5px;
 }
 
-#dbwdlikncg .gt_left {
+#dpzoeowtau .gt_left {
   text-align: left;
 }
 
-#dbwdlikncg .gt_center {
+#dpzoeowtau .gt_center {
   text-align: center;
 }
 
-#dbwdlikncg .gt_right {
+#dpzoeowtau .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dbwdlikncg .gt_font_normal {
+#dpzoeowtau .gt_font_normal {
   font-weight: normal;
 }
 
-#dbwdlikncg .gt_font_bold {
+#dpzoeowtau .gt_font_bold {
   font-weight: bold;
 }
 
-#dbwdlikncg .gt_font_italic {
+#dpzoeowtau .gt_font_italic {
   font-style: italic;
 }
 
-#dbwdlikncg .gt_super {
+#dpzoeowtau .gt_super {
   font-size: 65%;
 }
 
-#dbwdlikncg .gt_footnote_marks {
+#dpzoeowtau .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dbwdlikncg .gt_asterisk {
+#dpzoeowtau .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dbwdlikncg .gt_indent_1 {
+#dpzoeowtau .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dbwdlikncg .gt_indent_2 {
+#dpzoeowtau .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dbwdlikncg .gt_indent_3 {
+#dpzoeowtau .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dbwdlikncg .gt_indent_4 {
+#dpzoeowtau .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dbwdlikncg .gt_indent_5 {
+#dpzoeowtau .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="Date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Date</th>
@@ -699,9 +698,8 @@ Read a public shared <code>googlesheet</code> from Google Drive</p>
 </div>
 </div>
 </div>
-</div>
 <p><br>
-Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
+2.Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
 </p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
@@ -716,24 +714,23 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"test_xlsx.xlsx"</span>) <span class="co"># read file</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<div id="zbcukjzfmv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zbcukjzfmv table {
+<div id="fkghxjedlf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fkghxjedlf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zbcukjzfmv thead, #zbcukjzfmv tbody, #zbcukjzfmv tfoot, #zbcukjzfmv tr, #zbcukjzfmv td, #zbcukjzfmv th {
+#fkghxjedlf thead, #fkghxjedlf tbody, #fkghxjedlf tfoot, #fkghxjedlf tr, #fkghxjedlf td, #fkghxjedlf th {
   border-style: none;
 }
 
-#zbcukjzfmv p {
+#fkghxjedlf p {
   margin: 0;
   padding: 0;
 }
 
-#zbcukjzfmv .gt_table {
+#fkghxjedlf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -759,12 +756,12 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-left-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_caption {
+#fkghxjedlf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zbcukjzfmv .gt_title {
+#fkghxjedlf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -776,7 +773,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-width: 0;
 }
 
-#zbcukjzfmv .gt_subtitle {
+#fkghxjedlf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -788,7 +785,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-top-width: 0;
 }
 
-#zbcukjzfmv .gt_heading {
+#fkghxjedlf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -800,13 +797,13 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_bottom_border {
+#fkghxjedlf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_col_headings {
+#fkghxjedlf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -821,7 +818,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_col_heading {
+#fkghxjedlf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -841,7 +838,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   overflow-x: hidden;
 }
 
-#zbcukjzfmv .gt_column_spanner_outer {
+#fkghxjedlf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -853,15 +850,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 4px;
 }
 
-#zbcukjzfmv .gt_column_spanner_outer:first-child {
+#fkghxjedlf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zbcukjzfmv .gt_column_spanner_outer:last-child {
+#fkghxjedlf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zbcukjzfmv .gt_column_spanner {
+#fkghxjedlf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -873,11 +870,11 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   width: 100%;
 }
 
-#zbcukjzfmv .gt_spanner_row {
+#fkghxjedlf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zbcukjzfmv .gt_group_heading {
+#fkghxjedlf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -903,7 +900,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   text-align: left;
 }
 
-#zbcukjzfmv .gt_empty_group_heading {
+#fkghxjedlf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -918,15 +915,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   vertical-align: middle;
 }
 
-#zbcukjzfmv .gt_from_md > :first-child {
+#fkghxjedlf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zbcukjzfmv .gt_from_md > :last-child {
+#fkghxjedlf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zbcukjzfmv .gt_row {
+#fkghxjedlf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -945,7 +942,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   overflow-x: hidden;
 }
 
-#zbcukjzfmv .gt_stub {
+#fkghxjedlf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -958,7 +955,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#zbcukjzfmv .gt_stub_row_group {
+#fkghxjedlf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -972,15 +969,15 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   vertical-align: top;
 }
 
-#zbcukjzfmv .gt_row_group_first td {
+#fkghxjedlf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zbcukjzfmv .gt_row_group_first th {
+#fkghxjedlf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zbcukjzfmv .gt_summary_row {
+#fkghxjedlf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -990,16 +987,16 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#zbcukjzfmv .gt_first_summary_row {
+#fkghxjedlf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_first_summary_row.thick {
+#fkghxjedlf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zbcukjzfmv .gt_last_summary_row {
+#fkghxjedlf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1009,7 +1006,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_grand_summary_row {
+#fkghxjedlf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1019,7 +1016,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#zbcukjzfmv .gt_first_grand_summary_row {
+#fkghxjedlf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1029,7 +1026,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-top-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_last_grand_summary_row_top {
+#fkghxjedlf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1039,11 +1036,11 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_striped {
+#fkghxjedlf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zbcukjzfmv .gt_table_body {
+#fkghxjedlf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1052,7 +1049,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-bottom-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_footnotes {
+#fkghxjedlf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1066,7 +1063,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_footnote {
+#fkghxjedlf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1075,7 +1072,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#zbcukjzfmv .gt_sourcenotes {
+#fkghxjedlf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1089,7 +1086,7 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   border-right-color: #D3D3D3;
 }
 
-#zbcukjzfmv .gt_sourcenote {
+#fkghxjedlf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1097,68 +1094,68 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
   padding-right: 5px;
 }
 
-#zbcukjzfmv .gt_left {
+#fkghxjedlf .gt_left {
   text-align: left;
 }
 
-#zbcukjzfmv .gt_center {
+#fkghxjedlf .gt_center {
   text-align: center;
 }
 
-#zbcukjzfmv .gt_right {
+#fkghxjedlf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zbcukjzfmv .gt_font_normal {
+#fkghxjedlf .gt_font_normal {
   font-weight: normal;
 }
 
-#zbcukjzfmv .gt_font_bold {
+#fkghxjedlf .gt_font_bold {
   font-weight: bold;
 }
 
-#zbcukjzfmv .gt_font_italic {
+#fkghxjedlf .gt_font_italic {
   font-style: italic;
 }
 
-#zbcukjzfmv .gt_super {
+#fkghxjedlf .gt_super {
   font-size: 65%;
 }
 
-#zbcukjzfmv .gt_footnote_marks {
+#fkghxjedlf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zbcukjzfmv .gt_asterisk {
+#fkghxjedlf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zbcukjzfmv .gt_indent_1 {
+#fkghxjedlf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zbcukjzfmv .gt_indent_2 {
+#fkghxjedlf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zbcukjzfmv .gt_indent_3 {
+#fkghxjedlf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zbcukjzfmv .gt_indent_4 {
+#fkghxjedlf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zbcukjzfmv .gt_indent_5 {
+#fkghxjedlf .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="Date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Date</th>
@@ -1198,9 +1195,8 @@ Download and read a public shared <code>.xlsx</code> file from Google Drive<br>
 </div>
 </div>
 </div>
-</div>
 <p><br>
-Download and read a public shared <code>.rds</code> file from Google Drive</p>
+3.Download and read a public shared <code>.rds</code> file from Google Drive</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
@@ -1215,24 +1211,23 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_rds</span>(<span class="st">"test_rds.rds"</span>) <span class="co"># read file</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<div id="jbevzhtsps" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jbevzhtsps table {
+<div id="jbgwqdohwp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jbgwqdohwp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jbevzhtsps thead, #jbevzhtsps tbody, #jbevzhtsps tfoot, #jbevzhtsps tr, #jbevzhtsps td, #jbevzhtsps th {
+#jbgwqdohwp thead, #jbgwqdohwp tbody, #jbgwqdohwp tfoot, #jbgwqdohwp tr, #jbgwqdohwp td, #jbgwqdohwp th {
   border-style: none;
 }
 
-#jbevzhtsps p {
+#jbgwqdohwp p {
   margin: 0;
   padding: 0;
 }
 
-#jbevzhtsps .gt_table {
+#jbgwqdohwp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1258,12 +1253,12 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-left-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_caption {
+#jbgwqdohwp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jbevzhtsps .gt_title {
+#jbgwqdohwp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1275,7 +1270,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-width: 0;
 }
 
-#jbevzhtsps .gt_subtitle {
+#jbgwqdohwp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1287,7 +1282,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-top-width: 0;
 }
 
-#jbevzhtsps .gt_heading {
+#jbgwqdohwp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1299,13 +1294,13 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_bottom_border {
+#jbgwqdohwp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_col_headings {
+#jbgwqdohwp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1320,7 +1315,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_col_heading {
+#jbgwqdohwp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1340,7 +1335,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   overflow-x: hidden;
 }
 
-#jbevzhtsps .gt_column_spanner_outer {
+#jbgwqdohwp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1352,15 +1347,15 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 4px;
 }
 
-#jbevzhtsps .gt_column_spanner_outer:first-child {
+#jbgwqdohwp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jbevzhtsps .gt_column_spanner_outer:last-child {
+#jbgwqdohwp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jbevzhtsps .gt_column_spanner {
+#jbgwqdohwp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1372,11 +1367,11 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   width: 100%;
 }
 
-#jbevzhtsps .gt_spanner_row {
+#jbgwqdohwp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jbevzhtsps .gt_group_heading {
+#jbgwqdohwp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1402,7 +1397,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   text-align: left;
 }
 
-#jbevzhtsps .gt_empty_group_heading {
+#jbgwqdohwp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1417,15 +1412,15 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   vertical-align: middle;
 }
 
-#jbevzhtsps .gt_from_md > :first-child {
+#jbgwqdohwp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jbevzhtsps .gt_from_md > :last-child {
+#jbgwqdohwp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jbevzhtsps .gt_row {
+#jbgwqdohwp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1444,7 +1439,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   overflow-x: hidden;
 }
 
-#jbevzhtsps .gt_stub {
+#jbgwqdohwp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1457,7 +1452,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#jbevzhtsps .gt_stub_row_group {
+#jbgwqdohwp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1471,15 +1466,15 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   vertical-align: top;
 }
 
-#jbevzhtsps .gt_row_group_first td {
+#jbgwqdohwp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jbevzhtsps .gt_row_group_first th {
+#jbgwqdohwp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jbevzhtsps .gt_summary_row {
+#jbgwqdohwp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1489,16 +1484,16 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#jbevzhtsps .gt_first_summary_row {
+#jbgwqdohwp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_first_summary_row.thick {
+#jbgwqdohwp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jbevzhtsps .gt_last_summary_row {
+#jbgwqdohwp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1508,7 +1503,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_grand_summary_row {
+#jbgwqdohwp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1518,7 +1513,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#jbevzhtsps .gt_first_grand_summary_row {
+#jbgwqdohwp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1528,7 +1523,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-top-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_last_grand_summary_row_top {
+#jbgwqdohwp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1538,11 +1533,11 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_striped {
+#jbgwqdohwp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jbevzhtsps .gt_table_body {
+#jbgwqdohwp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1551,7 +1546,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_footnotes {
+#jbgwqdohwp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1565,7 +1560,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_footnote {
+#jbgwqdohwp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1574,7 +1569,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#jbevzhtsps .gt_sourcenotes {
+#jbgwqdohwp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1588,7 +1583,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#jbevzhtsps .gt_sourcenote {
+#jbgwqdohwp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1596,68 +1591,68 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
   padding-right: 5px;
 }
 
-#jbevzhtsps .gt_left {
+#jbgwqdohwp .gt_left {
   text-align: left;
 }
 
-#jbevzhtsps .gt_center {
+#jbgwqdohwp .gt_center {
   text-align: center;
 }
 
-#jbevzhtsps .gt_right {
+#jbgwqdohwp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jbevzhtsps .gt_font_normal {
+#jbgwqdohwp .gt_font_normal {
   font-weight: normal;
 }
 
-#jbevzhtsps .gt_font_bold {
+#jbgwqdohwp .gt_font_bold {
   font-weight: bold;
 }
 
-#jbevzhtsps .gt_font_italic {
+#jbgwqdohwp .gt_font_italic {
   font-style: italic;
 }
 
-#jbevzhtsps .gt_super {
+#jbgwqdohwp .gt_super {
   font-size: 65%;
 }
 
-#jbevzhtsps .gt_footnote_marks {
+#jbgwqdohwp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jbevzhtsps .gt_asterisk {
+#jbgwqdohwp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jbevzhtsps .gt_indent_1 {
+#jbgwqdohwp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jbevzhtsps .gt_indent_2 {
+#jbgwqdohwp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jbevzhtsps .gt_indent_3 {
+#jbgwqdohwp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jbevzhtsps .gt_indent_4 {
+#jbgwqdohwp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jbevzhtsps .gt_indent_5 {
+#jbgwqdohwp .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="Date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Date</th>
@@ -1701,7 +1696,6 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
 
 </div>
 </div>
-</div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # THIS DOES NOT WORK ??? (GOOGLE_API_KEY IS IN SECRETS AND CALLED IN WORKFLOW) ???</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># # AND IT WORKS WHEN I RUN IT LOCALLY</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># googledrive::drive_auth_configure(api_key = "GOOGLE_API_KEY") </span></span>
@@ -1715,7 +1709,7 @@ Download and read a public shared <code>.rds</code> file from Google Drive</p>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># file2 |&gt; gt() # print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br>
-Write and upload a <code>.rds</code> file to Google Drive</p>
+4.Write and upload a <code>.rds</code> file to Google Drive</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
@@ -1750,24 +1744,23 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_rds</span>(<span class="st">"test_rds_upload.rds"</span>) <span class="co"># read file</span></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<div id="twrlpimjng" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#twrlpimjng table {
+<div id="rvbewygaih" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rvbewygaih table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#twrlpimjng thead, #twrlpimjng tbody, #twrlpimjng tfoot, #twrlpimjng tr, #twrlpimjng td, #twrlpimjng th {
+#rvbewygaih thead, #rvbewygaih tbody, #rvbewygaih tfoot, #rvbewygaih tr, #rvbewygaih td, #rvbewygaih th {
   border-style: none;
 }
 
-#twrlpimjng p {
+#rvbewygaih p {
   margin: 0;
   padding: 0;
 }
 
-#twrlpimjng .gt_table {
+#rvbewygaih .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1793,12 +1786,12 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-left-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_caption {
+#rvbewygaih .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#twrlpimjng .gt_title {
+#rvbewygaih .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1810,7 +1803,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-bottom-width: 0;
 }
 
-#twrlpimjng .gt_subtitle {
+#rvbewygaih .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1822,7 +1815,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-top-width: 0;
 }
 
-#twrlpimjng .gt_heading {
+#rvbewygaih .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1834,13 +1827,13 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_bottom_border {
+#rvbewygaih .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_col_headings {
+#rvbewygaih .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1855,7 +1848,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_col_heading {
+#rvbewygaih .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1875,7 +1868,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   overflow-x: hidden;
 }
 
-#twrlpimjng .gt_column_spanner_outer {
+#rvbewygaih .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1887,15 +1880,15 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   padding-right: 4px;
 }
 
-#twrlpimjng .gt_column_spanner_outer:first-child {
+#rvbewygaih .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#twrlpimjng .gt_column_spanner_outer:last-child {
+#rvbewygaih .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#twrlpimjng .gt_column_spanner {
+#rvbewygaih .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1907,11 +1900,11 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   width: 100%;
 }
 
-#twrlpimjng .gt_spanner_row {
+#rvbewygaih .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#twrlpimjng .gt_group_heading {
+#rvbewygaih .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1937,7 +1930,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   text-align: left;
 }
 
-#twrlpimjng .gt_empty_group_heading {
+#rvbewygaih .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1952,15 +1945,15 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   vertical-align: middle;
 }
 
-#twrlpimjng .gt_from_md > :first-child {
+#rvbewygaih .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#twrlpimjng .gt_from_md > :last-child {
+#rvbewygaih .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#twrlpimjng .gt_row {
+#rvbewygaih .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1979,7 +1972,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   overflow-x: hidden;
 }
 
-#twrlpimjng .gt_stub {
+#rvbewygaih .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1992,7 +1985,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   padding-right: 5px;
 }
 
-#twrlpimjng .gt_stub_row_group {
+#rvbewygaih .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2006,15 +1999,15 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   vertical-align: top;
 }
 
-#twrlpimjng .gt_row_group_first td {
+#rvbewygaih .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#twrlpimjng .gt_row_group_first th {
+#rvbewygaih .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#twrlpimjng .gt_summary_row {
+#rvbewygaih .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2024,16 +2017,16 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   padding-right: 5px;
 }
 
-#twrlpimjng .gt_first_summary_row {
+#rvbewygaih .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_first_summary_row.thick {
+#rvbewygaih .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#twrlpimjng .gt_last_summary_row {
+#rvbewygaih .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2043,7 +2036,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_grand_summary_row {
+#rvbewygaih .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2053,7 +2046,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   padding-right: 5px;
 }
 
-#twrlpimjng .gt_first_grand_summary_row {
+#rvbewygaih .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2063,7 +2056,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-top-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_last_grand_summary_row_top {
+#rvbewygaih .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2073,11 +2066,11 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_striped {
+#rvbewygaih .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#twrlpimjng .gt_table_body {
+#rvbewygaih .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2086,7 +2079,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-bottom-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_footnotes {
+#rvbewygaih .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2100,7 +2093,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_footnote {
+#rvbewygaih .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2109,7 +2102,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   padding-right: 5px;
 }
 
-#twrlpimjng .gt_sourcenotes {
+#rvbewygaih .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2123,7 +2116,7 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   border-right-color: #D3D3D3;
 }
 
-#twrlpimjng .gt_sourcenote {
+#rvbewygaih .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2131,68 +2124,68 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
   padding-right: 5px;
 }
 
-#twrlpimjng .gt_left {
+#rvbewygaih .gt_left {
   text-align: left;
 }
 
-#twrlpimjng .gt_center {
+#rvbewygaih .gt_center {
   text-align: center;
 }
 
-#twrlpimjng .gt_right {
+#rvbewygaih .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#twrlpimjng .gt_font_normal {
+#rvbewygaih .gt_font_normal {
   font-weight: normal;
 }
 
-#twrlpimjng .gt_font_bold {
+#rvbewygaih .gt_font_bold {
   font-weight: bold;
 }
 
-#twrlpimjng .gt_font_italic {
+#rvbewygaih .gt_font_italic {
   font-style: italic;
 }
 
-#twrlpimjng .gt_super {
+#rvbewygaih .gt_super {
   font-size: 65%;
 }
 
-#twrlpimjng .gt_footnote_marks {
+#rvbewygaih .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#twrlpimjng .gt_asterisk {
+#rvbewygaih .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#twrlpimjng .gt_indent_1 {
+#rvbewygaih .gt_indent_1 {
   text-indent: 5px;
 }
 
-#twrlpimjng .gt_indent_2 {
+#rvbewygaih .gt_indent_2 {
   text-indent: 10px;
 }
 
-#twrlpimjng .gt_indent_3 {
+#rvbewygaih .gt_indent_3 {
   text-indent: 15px;
 }
 
-#twrlpimjng .gt_indent_4 {
+#rvbewygaih .gt_indent_4 {
   text-indent: 20px;
 }
 
-#twrlpimjng .gt_indent_5 {
+#rvbewygaih .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="Date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Date</th>
@@ -2232,9 +2225,8 @@ Write and upload a <code>.rds</code> file to Google Drive</p>
 </div>
 </div>
 </div>
-</div>
 <p><br>
-Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</a></p>
+5.Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr2)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
@@ -2249,24 +2241,23 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  resp_json<span class="sc">$</span>results<span class="sc">$</span>name <span class="sc">|&gt;</span>  tidyr<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>name_people <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<div id="cnweunmawp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cnweunmawp table {
+<div id="ioikgperfc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ioikgperfc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cnweunmawp thead, #cnweunmawp tbody, #cnweunmawp tfoot, #cnweunmawp tr, #cnweunmawp td, #cnweunmawp th {
+#ioikgperfc thead, #ioikgperfc tbody, #ioikgperfc tfoot, #ioikgperfc tr, #ioikgperfc td, #ioikgperfc th {
   border-style: none;
 }
 
-#cnweunmawp p {
+#ioikgperfc p {
   margin: 0;
   padding: 0;
 }
 
-#cnweunmawp .gt_table {
+#ioikgperfc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2292,12 +2283,12 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-left-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_caption {
+#ioikgperfc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cnweunmawp .gt_title {
+#ioikgperfc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2309,7 +2300,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-bottom-width: 0;
 }
 
-#cnweunmawp .gt_subtitle {
+#ioikgperfc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2321,7 +2312,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-top-width: 0;
 }
 
-#cnweunmawp .gt_heading {
+#ioikgperfc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2333,13 +2324,13 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-right-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_bottom_border {
+#ioikgperfc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_col_headings {
+#ioikgperfc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2354,7 +2345,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-right-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_col_heading {
+#ioikgperfc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2374,7 +2365,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   overflow-x: hidden;
 }
 
-#cnweunmawp .gt_column_spanner_outer {
+#ioikgperfc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2386,15 +2377,15 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   padding-right: 4px;
 }
 
-#cnweunmawp .gt_column_spanner_outer:first-child {
+#ioikgperfc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cnweunmawp .gt_column_spanner_outer:last-child {
+#ioikgperfc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cnweunmawp .gt_column_spanner {
+#ioikgperfc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2406,11 +2397,11 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   width: 100%;
 }
 
-#cnweunmawp .gt_spanner_row {
+#ioikgperfc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cnweunmawp .gt_group_heading {
+#ioikgperfc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2436,7 +2427,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   text-align: left;
 }
 
-#cnweunmawp .gt_empty_group_heading {
+#ioikgperfc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2451,15 +2442,15 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   vertical-align: middle;
 }
 
-#cnweunmawp .gt_from_md > :first-child {
+#ioikgperfc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cnweunmawp .gt_from_md > :last-child {
+#ioikgperfc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cnweunmawp .gt_row {
+#ioikgperfc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2478,7 +2469,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   overflow-x: hidden;
 }
 
-#cnweunmawp .gt_stub {
+#ioikgperfc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2491,7 +2482,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   padding-right: 5px;
 }
 
-#cnweunmawp .gt_stub_row_group {
+#ioikgperfc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2505,15 +2496,15 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   vertical-align: top;
 }
 
-#cnweunmawp .gt_row_group_first td {
+#ioikgperfc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cnweunmawp .gt_row_group_first th {
+#ioikgperfc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cnweunmawp .gt_summary_row {
+#ioikgperfc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2523,16 +2514,16 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   padding-right: 5px;
 }
 
-#cnweunmawp .gt_first_summary_row {
+#ioikgperfc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_first_summary_row.thick {
+#ioikgperfc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cnweunmawp .gt_last_summary_row {
+#ioikgperfc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2542,7 +2533,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-bottom-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_grand_summary_row {
+#ioikgperfc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2552,7 +2543,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   padding-right: 5px;
 }
 
-#cnweunmawp .gt_first_grand_summary_row {
+#ioikgperfc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2562,7 +2553,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-top-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_last_grand_summary_row_top {
+#ioikgperfc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2572,11 +2563,11 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-bottom-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_striped {
+#ioikgperfc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cnweunmawp .gt_table_body {
+#ioikgperfc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2585,7 +2576,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-bottom-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_footnotes {
+#ioikgperfc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2599,7 +2590,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-right-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_footnote {
+#ioikgperfc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2608,7 +2599,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   padding-right: 5px;
 }
 
-#cnweunmawp .gt_sourcenotes {
+#ioikgperfc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2622,7 +2613,7 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   border-right-color: #D3D3D3;
 }
 
-#cnweunmawp .gt_sourcenote {
+#ioikgperfc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2630,68 +2621,68 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
   padding-right: 5px;
 }
 
-#cnweunmawp .gt_left {
+#ioikgperfc .gt_left {
   text-align: left;
 }
 
-#cnweunmawp .gt_center {
+#ioikgperfc .gt_center {
   text-align: center;
 }
 
-#cnweunmawp .gt_right {
+#ioikgperfc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cnweunmawp .gt_font_normal {
+#ioikgperfc .gt_font_normal {
   font-weight: normal;
 }
 
-#cnweunmawp .gt_font_bold {
+#ioikgperfc .gt_font_bold {
   font-weight: bold;
 }
 
-#cnweunmawp .gt_font_italic {
+#ioikgperfc .gt_font_italic {
   font-style: italic;
 }
 
-#cnweunmawp .gt_super {
+#ioikgperfc .gt_super {
   font-size: 65%;
 }
 
-#cnweunmawp .gt_footnote_marks {
+#ioikgperfc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cnweunmawp .gt_asterisk {
+#ioikgperfc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cnweunmawp .gt_indent_1 {
+#ioikgperfc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cnweunmawp .gt_indent_2 {
+#ioikgperfc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cnweunmawp .gt_indent_3 {
+#ioikgperfc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cnweunmawp .gt_indent_4 {
+#ioikgperfc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cnweunmawp .gt_indent_5 {
+#ioikgperfc .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="value" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">value</th>
@@ -2734,9 +2725,8 @@ Read data from an external API: <a href="https://swapi.dev/">The Star Wars API</
 </div>
 </div>
 </div>
-</div>
 <p><br>
-Read data from an external API, Weather forecast in NYC, API: <a href="https://api.weather.gov">The National Weather Service (NWS)</a></p>
+6.Read data from an external API, Weather forecast in NYC, API: <a href="https://api.weather.gov">The National Weather Service (NWS)</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
@@ -2780,23 +2770,23 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
 <span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    rain_prob <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">120</span>)</span>
 <span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="cyxvjimkyx" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cyxvjimkyx table {
+<div id="kqumopgiyx" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kqumopgiyx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cyxvjimkyx thead, #cyxvjimkyx tbody, #cyxvjimkyx tfoot, #cyxvjimkyx tr, #cyxvjimkyx td, #cyxvjimkyx th {
+#kqumopgiyx thead, #kqumopgiyx tbody, #kqumopgiyx tfoot, #kqumopgiyx tr, #kqumopgiyx td, #kqumopgiyx th {
   border-style: none;
 }
 
-#cyxvjimkyx p {
+#kqumopgiyx p {
   margin: 0;
   padding: 0;
 }
 
-#cyxvjimkyx .gt_table {
+#kqumopgiyx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2822,12 +2812,12 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-left-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_caption {
+#kqumopgiyx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cyxvjimkyx .gt_title {
+#kqumopgiyx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2839,7 +2829,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-width: 0;
 }
 
-#cyxvjimkyx .gt_subtitle {
+#kqumopgiyx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2851,7 +2841,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-top-width: 0;
 }
 
-#cyxvjimkyx .gt_heading {
+#kqumopgiyx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2863,13 +2853,13 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_bottom_border {
+#kqumopgiyx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_col_headings {
+#kqumopgiyx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2884,7 +2874,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_col_heading {
+#kqumopgiyx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2904,7 +2894,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   overflow-x: hidden;
 }
 
-#cyxvjimkyx .gt_column_spanner_outer {
+#kqumopgiyx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2916,15 +2906,15 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 4px;
 }
 
-#cyxvjimkyx .gt_column_spanner_outer:first-child {
+#kqumopgiyx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cyxvjimkyx .gt_column_spanner_outer:last-child {
+#kqumopgiyx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cyxvjimkyx .gt_column_spanner {
+#kqumopgiyx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2936,11 +2926,11 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   width: 100%;
 }
 
-#cyxvjimkyx .gt_spanner_row {
+#kqumopgiyx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cyxvjimkyx .gt_group_heading {
+#kqumopgiyx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2966,7 +2956,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   text-align: left;
 }
 
-#cyxvjimkyx .gt_empty_group_heading {
+#kqumopgiyx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2981,15 +2971,15 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   vertical-align: middle;
 }
 
-#cyxvjimkyx .gt_from_md > :first-child {
+#kqumopgiyx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cyxvjimkyx .gt_from_md > :last-child {
+#kqumopgiyx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cyxvjimkyx .gt_row {
+#kqumopgiyx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3008,7 +2998,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   overflow-x: hidden;
 }
 
-#cyxvjimkyx .gt_stub {
+#kqumopgiyx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3021,7 +3011,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cyxvjimkyx .gt_stub_row_group {
+#kqumopgiyx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3035,15 +3025,15 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   vertical-align: top;
 }
 
-#cyxvjimkyx .gt_row_group_first td {
+#kqumopgiyx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cyxvjimkyx .gt_row_group_first th {
+#kqumopgiyx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cyxvjimkyx .gt_summary_row {
+#kqumopgiyx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3053,16 +3043,16 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cyxvjimkyx .gt_first_summary_row {
+#kqumopgiyx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_first_summary_row.thick {
+#kqumopgiyx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cyxvjimkyx .gt_last_summary_row {
+#kqumopgiyx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3072,7 +3062,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_grand_summary_row {
+#kqumopgiyx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3082,7 +3072,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cyxvjimkyx .gt_first_grand_summary_row {
+#kqumopgiyx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3092,7 +3082,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-top-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_last_grand_summary_row_top {
+#kqumopgiyx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3102,11 +3092,11 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_striped {
+#kqumopgiyx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cyxvjimkyx .gt_table_body {
+#kqumopgiyx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3115,7 +3105,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-bottom-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_footnotes {
+#kqumopgiyx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3129,7 +3119,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_footnote {
+#kqumopgiyx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3138,7 +3128,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cyxvjimkyx .gt_sourcenotes {
+#kqumopgiyx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3152,7 +3142,7 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   border-right-color: #D3D3D3;
 }
 
-#cyxvjimkyx .gt_sourcenote {
+#kqumopgiyx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3160,68 +3150,68 @@ Read data from an external API, Weather forecast in NYC, API: <a href="https://a
   padding-right: 5px;
 }
 
-#cyxvjimkyx .gt_left {
+#kqumopgiyx .gt_left {
   text-align: left;
 }
 
-#cyxvjimkyx .gt_center {
+#kqumopgiyx .gt_center {
   text-align: center;
 }
 
-#cyxvjimkyx .gt_right {
+#kqumopgiyx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cyxvjimkyx .gt_font_normal {
+#kqumopgiyx .gt_font_normal {
   font-weight: normal;
 }
 
-#cyxvjimkyx .gt_font_bold {
+#kqumopgiyx .gt_font_bold {
   font-weight: bold;
 }
 
-#cyxvjimkyx .gt_font_italic {
+#kqumopgiyx .gt_font_italic {
   font-style: italic;
 }
 
-#cyxvjimkyx .gt_super {
+#kqumopgiyx .gt_super {
   font-size: 65%;
 }
 
-#cyxvjimkyx .gt_footnote_marks {
+#kqumopgiyx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cyxvjimkyx .gt_asterisk {
+#kqumopgiyx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cyxvjimkyx .gt_indent_1 {
+#kqumopgiyx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cyxvjimkyx .gt_indent_2 {
+#kqumopgiyx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cyxvjimkyx .gt_indent_3 {
+#kqumopgiyx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cyxvjimkyx .gt_indent_4 {
+#kqumopgiyx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cyxvjimkyx .gt_indent_5 {
+#kqumopgiyx .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<div id="cyxvjimkyx" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="cyxvjimkyx">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"time":["2024-03-27T21:00:00Z","2024-03-27T22:00:00Z","2024-03-27T23:00:00Z","2024-03-28T00:00:00Z","2024-03-28T01:00:00Z","2024-03-28T02:00:00Z","2024-03-28T03:00:00Z","2024-03-28T04:00:00Z","2024-03-28T05:00:00Z","2024-03-28T06:00:00Z","2024-03-28T07:00:00Z","2024-03-28T08:00:00Z","2024-03-28T09:00:00Z","2024-03-28T10:00:00Z","2024-03-28T11:00:00Z","2024-03-28T12:00:00Z","2024-03-28T13:00:00Z","2024-03-28T14:00:00Z","2024-03-28T15:00:00Z","2024-03-28T16:00:00Z","2024-03-28T17:00:00Z","2024-03-28T18:00:00Z","2024-03-28T19:00:00Z","2024-03-28T20:00:00Z","2024-03-28T21:00:00Z","2024-03-28T22:00:00Z","2024-03-28T23:00:00Z","2024-03-29T00:00:00Z","2024-03-29T01:00:00Z","2024-03-29T02:00:00Z","2024-03-29T03:00:00Z","2024-03-29T04:00:00Z","2024-03-29T05:00:00Z","2024-03-29T06:00:00Z","2024-03-29T07:00:00Z","2024-03-29T08:00:00Z","2024-03-29T09:00:00Z","2024-03-29T10:00:00Z","2024-03-29T11:00:00Z","2024-03-29T12:00:00Z","2024-03-29T13:00:00Z","2024-03-29T14:00:00Z","2024-03-29T15:00:00Z","2024-03-29T16:00:00Z","2024-03-29T17:00:00Z","2024-03-29T18:00:00Z","2024-03-29T19:00:00Z","2024-03-29T20:00:00Z","2024-03-29T21:00:00Z","2024-03-29T22:00:00Z","2024-03-29T23:00:00Z","2024-03-30T00:00:00Z","2024-03-30T01:00:00Z","2024-03-30T02:00:00Z","2024-03-30T03:00:00Z","2024-03-30T04:00:00Z","2024-03-30T05:00:00Z","2024-03-30T06:00:00Z","2024-03-30T07:00:00Z","2024-03-30T08:00:00Z","2024-03-30T09:00:00Z","2024-03-30T10:00:00Z","2024-03-30T11:00:00Z","2024-03-30T12:00:00Z","2024-03-30T13:00:00Z","2024-03-30T14:00:00Z","2024-03-30T15:00:00Z","2024-03-30T16:00:00Z","2024-03-30T17:00:00Z","2024-03-30T18:00:00Z","2024-03-30T19:00:00Z","2024-03-30T20:00:00Z","2024-03-30T21:00:00Z","2024-03-30T22:00:00Z","2024-03-30T23:00:00Z","2024-03-31T00:00:00Z","2024-03-31T01:00:00Z","2024-03-31T02:00:00Z","2024-03-31T03:00:00Z","2024-03-31T04:00:00Z","2024-03-31T05:00:00Z","2024-03-31T06:00:00Z","2024-03-31T07:00:00Z","2024-03-31T08:00:00Z","2024-03-31T09:00:00Z","2024-03-31T10:00:00Z","2024-03-31T11:00:00Z","2024-03-31T12:00:00Z","2024-03-31T13:00:00Z","2024-03-31T14:00:00Z","2024-03-31T15:00:00Z","2024-03-31T16:00:00Z","2024-03-31T17:00:00Z","2024-03-31T18:00:00Z","2024-03-31T19:00:00Z","2024-03-31T20:00:00Z","2024-03-31T21:00:00Z","2024-03-31T22:00:00Z","2024-03-31T23:00:00Z","2024-04-01T00:00:00Z","2024-04-01T01:00:00Z","2024-04-01T02:00:00Z","2024-04-01T03:00:00Z","2024-04-01T04:00:00Z","2024-04-01T05:00:00Z","2024-04-01T06:00:00Z","2024-04-01T07:00:00Z","2024-04-01T08:00:00Z","2024-04-01T09:00:00Z","2024-04-01T10:00:00Z","2024-04-01T11:00:00Z","2024-04-01T12:00:00Z","2024-04-01T13:00:00Z","2024-04-01T14:00:00Z","2024-04-01T15:00:00Z","2024-04-01T16:00:00Z","2024-04-01T17:00:00Z","2024-04-01T18:00:00Z","2024-04-01T19:00:00Z","2024-04-01T20:00:00Z","2024-04-01T21:00:00Z","2024-04-01T22:00:00Z","2024-04-01T23:00:00Z","2024-04-02T00:00:00Z","2024-04-02T01:00:00Z","2024-04-02T02:00:00Z","2024-04-02T03:00:00Z","2024-04-02T04:00:00Z","2024-04-02T05:00:00Z","2024-04-02T06:00:00Z","2024-04-02T07:00:00Z","2024-04-02T08:00:00Z","2024-04-02T09:00:00Z","2024-04-02T10:00:00Z","2024-04-02T11:00:00Z","2024-04-02T12:00:00Z","2024-04-02T13:00:00Z","2024-04-02T14:00:00Z","2024-04-02T15:00:00Z","2024-04-02T16:00:00Z","2024-04-02T17:00:00Z","2024-04-02T18:00:00Z","2024-04-02T19:00:00Z","2024-04-02T20:00:00Z","2024-04-02T21:00:00Z","2024-04-02T22:00:00Z","2024-04-02T23:00:00Z","2024-04-03T00:00:00Z","2024-04-03T01:00:00Z","2024-04-03T02:00:00Z","2024-04-03T03:00:00Z","2024-04-03T04:00:00Z","2024-04-03T05:00:00Z","2024-04-03T06:00:00Z","2024-04-03T07:00:00Z","2024-04-03T08:00:00Z"],"temp_F":[50,50,49,48,48,47,47,47,47,47,46,46,46,46,46,47,47,48,49,49,50,50,50,50,49,49,48,48,47,46,45,43,42,41,40,39,39,39,40,41,42,44,47,50,52,54,55,55,54,53,51,49,47,46,44,43,43,42,41,40,39,39,39,40,43,45,48,51,54,56,58,59,59,57,55,53,52,51,50,49,47,45,45,45,45,45,44,44,46,49,53,55,57,58,60,60,60,58,56,54,52,50,49,48,48,47,45,43,42,42,43,45,47,48,50,52,53,54,55,56,55,53,50,48,47,48,48,47,46,45,45,46,47,47,47,47,49,51,53,53,53,53,54,55,55,53,51,49,49,49,49,48,46,44,45,46],"rain_prob":[35,40,51,56,56,56,84,84,84,95,95,95,96,96,96,88,88,88,87,87,87,76,76,76,71,71,71,41,41,41,31,31,31,27,27,27,17,17,17,3,3,3,3,3,3,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,21,21,21,21,21,22,22,22,22,22,22,22,22,22,22,22,22,10,10,10,10,10,10,5,5,5,5,5,5,9,9,9,9,9,9,18,18,18,18,18,18,32,32,32,32,32,32,34,34,34,34,34,34,38,38,38,38,38,38,53,53,53,53,53,53,65,65,65,65,65,65,68,68,68,68,68,68,57,57,57,57,57,57,51,51,51],"forecast":["Chance Light Rain","Chance Light Rain","Chance Light Rain","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain","Light Rain","Light Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Light Rain Likely","Light Rain Likely","Light Rain Likely","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Slight Chance Rain And Snow","Slight Chance Rain And Snow","Slight Chance Rain And Snow","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Chance Light Rain","Chance Light Rain","Chance Light Rain"]},"columns":[{"id":"time","name":"time","type":"Date","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["2024-03-27 21:00:00","2024-03-27 22:00:00","2024-03-27 23:00:00","2024-03-28","2024-03-28 01:00:00","2024-03-28 02:00:00","2024-03-28 03:00:00","2024-03-28 04:00:00","2024-03-28 05:00:00","2024-03-28 06:00:00","2024-03-28 07:00:00","2024-03-28 08:00:00","2024-03-28 09:00:00","2024-03-28 10:00:00","2024-03-28 11:00:00","2024-03-28 12:00:00","2024-03-28 13:00:00","2024-03-28 14:00:00","2024-03-28 15:00:00","2024-03-28 16:00:00","2024-03-28 17:00:00","2024-03-28 18:00:00","2024-03-28 19:00:00","2024-03-28 20:00:00","2024-03-28 21:00:00","2024-03-28 22:00:00","2024-03-28 23:00:00","2024-03-29","2024-03-29 01:00:00","2024-03-29 02:00:00","2024-03-29 03:00:00","2024-03-29 04:00:00","2024-03-29 05:00:00","2024-03-29 06:00:00","2024-03-29 07:00:00","2024-03-29 08:00:00","2024-03-29 09:00:00","2024-03-29 10:00:00","2024-03-29 11:00:00","2024-03-29 12:00:00","2024-03-29 13:00:00","2024-03-29 14:00:00","2024-03-29 15:00:00","2024-03-29 16:00:00","2024-03-29 17:00:00","2024-03-29 18:00:00","2024-03-29 19:00:00","2024-03-29 20:00:00","2024-03-29 21:00:00","2024-03-29 22:00:00","2024-03-29 23:00:00","2024-03-30","2024-03-30 01:00:00","2024-03-30 02:00:00","2024-03-30 03:00:00","2024-03-30 04:00:00","2024-03-30 05:00:00","2024-03-30 06:00:00","2024-03-30 07:00:00","2024-03-30 08:00:00","2024-03-30 09:00:00","2024-03-30 10:00:00","2024-03-30 11:00:00","2024-03-30 12:00:00","2024-03-30 13:00:00","2024-03-30 14:00:00","2024-03-30 15:00:00","2024-03-30 16:00:00","2024-03-30 17:00:00","2024-03-30 18:00:00","2024-03-30 19:00:00","2024-03-30 20:00:00","2024-03-30 21:00:00","2024-03-30 22:00:00","2024-03-30 23:00:00","2024-03-31","2024-03-31 01:00:00","2024-03-31 02:00:00","2024-03-31 03:00:00","2024-03-31 04:00:00","2024-03-31 05:00:00","2024-03-31 06:00:00","2024-03-31 07:00:00","2024-03-31 08:00:00","2024-03-31 09:00:00","2024-03-31 10:00:00","2024-03-31 11:00:00","2024-03-31 12:00:00","2024-03-31 13:00:00","2024-03-31 14:00:00","2024-03-31 15:00:00","2024-03-31 16:00:00","2024-03-31 17:00:00","2024-03-31 18:00:00","2024-03-31 19:00:00","2024-03-31 20:00:00","2024-03-31 21:00:00","2024-03-31 22:00:00","2024-03-31 23:00:00","2024-04-01","2024-04-01 01:00:00","2024-04-01 02:00:00","2024-04-01 03:00:00","2024-04-01 04:00:00","2024-04-01 05:00:00","2024-04-01 06:00:00","2024-04-01 07:00:00","2024-04-01 08:00:00","2024-04-01 09:00:00","2024-04-01 10:00:00","2024-04-01 11:00:00","2024-04-01 12:00:00","2024-04-01 13:00:00","2024-04-01 14:00:00","2024-04-01 15:00:00","2024-04-01 16:00:00","2024-04-01 17:00:00","2024-04-01 18:00:00","2024-04-01 19:00:00","2024-04-01 20:00:00","2024-04-01 21:00:00","2024-04-01 22:00:00","2024-04-01 23:00:00","2024-04-02","2024-04-02 01:00:00","2024-04-02 02:00:00","2024-04-02 03:00:00","2024-04-02 04:00:00","2024-04-02 05:00:00","2024-04-02 06:00:00","2024-04-02 07:00:00","2024-04-02 08:00:00","2024-04-02 09:00:00","2024-04-02 10:00:00","2024-04-02 11:00:00","2024-04-02 12:00:00","2024-04-02 13:00:00","2024-04-02 14:00:00","2024-04-02 15:00:00","2024-04-02 16:00:00","2024-04-02 17:00:00","2024-04-02 18:00:00","2024-04-02 19:00:00","2024-04-02 20:00:00","2024-04-02 21:00:00","2024-04-02 22:00:00","2024-04-02 23:00:00","2024-04-03","2024-04-03 01:00:00","2024-04-03 02:00:00","2024-04-03 03:00:00","2024-04-03 04:00:00","2024-04-03 05:00:00","2024-04-03 06:00:00","2024-04-03 07:00:00","2024-04-03 08:00:00"],"html":true,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"temp_F","name":"temp_F","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["50","50","49","48","48","47","47","47","47","47","46","46","46","46","46","47","47","48","49","49","50","50","50","50","49","49","48","48","47","46","45","43","42","41","40","39","39","39","40","41","42","44","47","50","52","54","55","55","54","53","51","49","47","46","44","43","43","42","41","40","39","39","39","40","43","45","48","51","54","56","58","59","59","57","55","53","52","51","50","49","47","45","45","45","45","45","44","44","46","49","53","55","57","58","60","60","60","58","56","54","52","50","49","48","48","47","45","43","42","42","43","45","47","48","50","52","53","54","55","56","55","53","50","48","47","48","48","47","46","45","45","46","47","47","47","47","49","51","53","53","53","53","54","55","55","53","51","49","49","49","49","48","46","44","45","46"],"html":true,"width":120,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"rain_prob","name":"rain_prob","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["35","40","51","56","56","56","84","84","84","95","95","95","96","96","96","88","88","88","87","87","87","76","76","76","71","71","71","41","41","41","31","31","31","27","27","27","17","17","17","3","3","3","3","3","3","1","1","1","1","1","1","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","21","21","21","21","21","21","22","22","22","22","22","22","22","22","22","22","22","22","10","10","10","10","10","10","5","5","5","5","5","5","9","9","9","9","9","9","18","18","18","18","18","18","32","32","32","32","32","32","34","34","34","34","34","34","38","38","38","38","38","38","53","53","53","53","53","53","65","65","65","65","65","65","68","68","68","68","68","68","57","57","57","57","57","57","51","51","51"],"html":true,"width":120,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"forecast","name":"forecast","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["Chance Light Rain","Chance Light Rain","Chance Light Rain","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain","Light Rain","Light Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Rain","Light Rain Likely","Light Rain Likely","Light Rain Likely","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Slight Chance Rain And Snow","Slight Chance Rain And Snow","Slight Chance Rain And Snow","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Partly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Slight Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Chance Light Rain","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Light Rain Likely","Chance Light Rain","Chance Light Rain","Chance Light Rain"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"cyxvjimkyx","dataKey":"9f3c69b22df3e32c74133d8af8add26f"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style"],"jsHooks":[]}</script>
+<div id="kqumopgiyx" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="kqumopgiyx">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"time":["2024-08-07T14:00:00Z","2024-08-07T15:00:00Z","2024-08-07T16:00:00Z","2024-08-07T17:00:00Z","2024-08-07T18:00:00Z","2024-08-07T19:00:00Z","2024-08-07T20:00:00Z","2024-08-07T21:00:00Z","2024-08-07T22:00:00Z","2024-08-07T23:00:00Z","2024-08-08T00:00:00Z","2024-08-08T01:00:00Z","2024-08-08T02:00:00Z","2024-08-08T03:00:00Z","2024-08-08T04:00:00Z","2024-08-08T05:00:00Z","2024-08-08T06:00:00Z","2024-08-08T07:00:00Z","2024-08-08T08:00:00Z","2024-08-08T09:00:00Z","2024-08-08T10:00:00Z","2024-08-08T11:00:00Z","2024-08-08T12:00:00Z","2024-08-08T13:00:00Z","2024-08-08T14:00:00Z","2024-08-08T15:00:00Z","2024-08-08T16:00:00Z","2024-08-08T17:00:00Z","2024-08-08T18:00:00Z","2024-08-08T19:00:00Z","2024-08-08T20:00:00Z","2024-08-08T21:00:00Z","2024-08-08T22:00:00Z","2024-08-08T23:00:00Z","2024-08-09T00:00:00Z","2024-08-09T01:00:00Z","2024-08-09T02:00:00Z","2024-08-09T03:00:00Z","2024-08-09T04:00:00Z","2024-08-09T05:00:00Z","2024-08-09T06:00:00Z","2024-08-09T07:00:00Z","2024-08-09T08:00:00Z","2024-08-09T09:00:00Z","2024-08-09T10:00:00Z","2024-08-09T11:00:00Z","2024-08-09T12:00:00Z","2024-08-09T13:00:00Z","2024-08-09T14:00:00Z","2024-08-09T15:00:00Z","2024-08-09T16:00:00Z","2024-08-09T17:00:00Z","2024-08-09T18:00:00Z","2024-08-09T19:00:00Z","2024-08-09T20:00:00Z","2024-08-09T21:00:00Z","2024-08-09T22:00:00Z","2024-08-09T23:00:00Z","2024-08-10T00:00:00Z","2024-08-10T01:00:00Z","2024-08-10T02:00:00Z","2024-08-10T03:00:00Z","2024-08-10T04:00:00Z","2024-08-10T05:00:00Z","2024-08-10T06:00:00Z","2024-08-10T07:00:00Z","2024-08-10T08:00:00Z","2024-08-10T09:00:00Z","2024-08-10T10:00:00Z","2024-08-10T11:00:00Z","2024-08-10T12:00:00Z","2024-08-10T13:00:00Z","2024-08-10T14:00:00Z","2024-08-10T15:00:00Z","2024-08-10T16:00:00Z","2024-08-10T17:00:00Z","2024-08-10T18:00:00Z","2024-08-10T19:00:00Z","2024-08-10T20:00:00Z","2024-08-10T21:00:00Z","2024-08-10T22:00:00Z","2024-08-10T23:00:00Z","2024-08-11T00:00:00Z","2024-08-11T01:00:00Z","2024-08-11T02:00:00Z","2024-08-11T03:00:00Z","2024-08-11T04:00:00Z","2024-08-11T05:00:00Z","2024-08-11T06:00:00Z","2024-08-11T07:00:00Z","2024-08-11T08:00:00Z","2024-08-11T09:00:00Z","2024-08-11T10:00:00Z","2024-08-11T11:00:00Z","2024-08-11T12:00:00Z","2024-08-11T13:00:00Z","2024-08-11T14:00:00Z","2024-08-11T15:00:00Z","2024-08-11T16:00:00Z","2024-08-11T17:00:00Z","2024-08-11T18:00:00Z","2024-08-11T19:00:00Z","2024-08-11T20:00:00Z","2024-08-11T21:00:00Z","2024-08-11T22:00:00Z","2024-08-11T23:00:00Z","2024-08-12T00:00:00Z","2024-08-12T01:00:00Z","2024-08-12T02:00:00Z","2024-08-12T03:00:00Z","2024-08-12T04:00:00Z","2024-08-12T05:00:00Z","2024-08-12T06:00:00Z","2024-08-12T07:00:00Z","2024-08-12T08:00:00Z","2024-08-12T09:00:00Z","2024-08-12T10:00:00Z","2024-08-12T11:00:00Z","2024-08-12T12:00:00Z","2024-08-12T13:00:00Z","2024-08-12T14:00:00Z","2024-08-12T15:00:00Z","2024-08-12T16:00:00Z","2024-08-12T17:00:00Z","2024-08-12T18:00:00Z","2024-08-12T19:00:00Z","2024-08-12T20:00:00Z","2024-08-12T21:00:00Z","2024-08-12T22:00:00Z","2024-08-12T23:00:00Z","2024-08-13T00:00:00Z","2024-08-13T01:00:00Z","2024-08-13T02:00:00Z","2024-08-13T03:00:00Z","2024-08-13T04:00:00Z","2024-08-13T05:00:00Z","2024-08-13T06:00:00Z","2024-08-13T07:00:00Z","2024-08-13T08:00:00Z","2024-08-13T09:00:00Z","2024-08-13T10:00:00Z","2024-08-13T11:00:00Z","2024-08-13T12:00:00Z","2024-08-13T13:00:00Z","2024-08-13T14:00:00Z","2024-08-13T15:00:00Z","2024-08-13T16:00:00Z","2024-08-13T17:00:00Z","2024-08-13T18:00:00Z","2024-08-13T19:00:00Z","2024-08-13T20:00:00Z","2024-08-13T21:00:00Z","2024-08-13T22:00:00Z","2024-08-13T23:00:00Z","2024-08-14T00:00:00Z","2024-08-14T01:00:00Z"],"temp_F":[69,70,70,70,71,72,72,72,71,71,70,70,69,69,70,70,70,69,68,67,67,67,68,69,70,71,72,73,74,74,75,75,75,74,73,72,71,71,71,72,72,72,72,72,73,74,75,76,77,78,80,81,82,82,80,79,78,78,77,77,78,78,78,78,78,77,77,76,76,76,76,77,78,79,80,81,82,83,83,82,81,79,77,76,75,74,73,72,71,70,69,68,68,68,69,71,74,77,79,80,81,82,82,81,80,78,76,75,74,73,72,71,70,69,68,68,68,68,69,71,74,77,79,81,82,82,82,81,80,78,76,75,74,73,72,71,70,69,68,68,68,68,69,71,74,77,79,81,82,83,83,82,81,79,77,76],"rain_prob":[42,29,29,29,32,32,32,32,23,23,23,22,22,22,22,22,24,24,24,24,24,24,48,48,48,48,48,48,47,47,47,47,47,47,54,54,54,54,54,54,59,59,59,59,59,59,88,88,88,88,88,88,90,90,90,90,90,90,85,85,85,85,85,85,78,78,78,78,78,78,37,37,37,37,37,37,17,17,17,17,17,17,6,6,6,6,6,6,4,4,4,4,4,4,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,6,6,6,6,6,6,5,5],"forecast":["Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Mostly Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy"]},"columns":[{"id":"time","name":"time","type":"Date","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["2024-08-07 14:00:00","2024-08-07 15:00:00","2024-08-07 16:00:00","2024-08-07 17:00:00","2024-08-07 18:00:00","2024-08-07 19:00:00","2024-08-07 20:00:00","2024-08-07 21:00:00","2024-08-07 22:00:00","2024-08-07 23:00:00","2024-08-08","2024-08-08 01:00:00","2024-08-08 02:00:00","2024-08-08 03:00:00","2024-08-08 04:00:00","2024-08-08 05:00:00","2024-08-08 06:00:00","2024-08-08 07:00:00","2024-08-08 08:00:00","2024-08-08 09:00:00","2024-08-08 10:00:00","2024-08-08 11:00:00","2024-08-08 12:00:00","2024-08-08 13:00:00","2024-08-08 14:00:00","2024-08-08 15:00:00","2024-08-08 16:00:00","2024-08-08 17:00:00","2024-08-08 18:00:00","2024-08-08 19:00:00","2024-08-08 20:00:00","2024-08-08 21:00:00","2024-08-08 22:00:00","2024-08-08 23:00:00","2024-08-09","2024-08-09 01:00:00","2024-08-09 02:00:00","2024-08-09 03:00:00","2024-08-09 04:00:00","2024-08-09 05:00:00","2024-08-09 06:00:00","2024-08-09 07:00:00","2024-08-09 08:00:00","2024-08-09 09:00:00","2024-08-09 10:00:00","2024-08-09 11:00:00","2024-08-09 12:00:00","2024-08-09 13:00:00","2024-08-09 14:00:00","2024-08-09 15:00:00","2024-08-09 16:00:00","2024-08-09 17:00:00","2024-08-09 18:00:00","2024-08-09 19:00:00","2024-08-09 20:00:00","2024-08-09 21:00:00","2024-08-09 22:00:00","2024-08-09 23:00:00","2024-08-10","2024-08-10 01:00:00","2024-08-10 02:00:00","2024-08-10 03:00:00","2024-08-10 04:00:00","2024-08-10 05:00:00","2024-08-10 06:00:00","2024-08-10 07:00:00","2024-08-10 08:00:00","2024-08-10 09:00:00","2024-08-10 10:00:00","2024-08-10 11:00:00","2024-08-10 12:00:00","2024-08-10 13:00:00","2024-08-10 14:00:00","2024-08-10 15:00:00","2024-08-10 16:00:00","2024-08-10 17:00:00","2024-08-10 18:00:00","2024-08-10 19:00:00","2024-08-10 20:00:00","2024-08-10 21:00:00","2024-08-10 22:00:00","2024-08-10 23:00:00","2024-08-11","2024-08-11 01:00:00","2024-08-11 02:00:00","2024-08-11 03:00:00","2024-08-11 04:00:00","2024-08-11 05:00:00","2024-08-11 06:00:00","2024-08-11 07:00:00","2024-08-11 08:00:00","2024-08-11 09:00:00","2024-08-11 10:00:00","2024-08-11 11:00:00","2024-08-11 12:00:00","2024-08-11 13:00:00","2024-08-11 14:00:00","2024-08-11 15:00:00","2024-08-11 16:00:00","2024-08-11 17:00:00","2024-08-11 18:00:00","2024-08-11 19:00:00","2024-08-11 20:00:00","2024-08-11 21:00:00","2024-08-11 22:00:00","2024-08-11 23:00:00","2024-08-12","2024-08-12 01:00:00","2024-08-12 02:00:00","2024-08-12 03:00:00","2024-08-12 04:00:00","2024-08-12 05:00:00","2024-08-12 06:00:00","2024-08-12 07:00:00","2024-08-12 08:00:00","2024-08-12 09:00:00","2024-08-12 10:00:00","2024-08-12 11:00:00","2024-08-12 12:00:00","2024-08-12 13:00:00","2024-08-12 14:00:00","2024-08-12 15:00:00","2024-08-12 16:00:00","2024-08-12 17:00:00","2024-08-12 18:00:00","2024-08-12 19:00:00","2024-08-12 20:00:00","2024-08-12 21:00:00","2024-08-12 22:00:00","2024-08-12 23:00:00","2024-08-13","2024-08-13 01:00:00","2024-08-13 02:00:00","2024-08-13 03:00:00","2024-08-13 04:00:00","2024-08-13 05:00:00","2024-08-13 06:00:00","2024-08-13 07:00:00","2024-08-13 08:00:00","2024-08-13 09:00:00","2024-08-13 10:00:00","2024-08-13 11:00:00","2024-08-13 12:00:00","2024-08-13 13:00:00","2024-08-13 14:00:00","2024-08-13 15:00:00","2024-08-13 16:00:00","2024-08-13 17:00:00","2024-08-13 18:00:00","2024-08-13 19:00:00","2024-08-13 20:00:00","2024-08-13 21:00:00","2024-08-13 22:00:00","2024-08-13 23:00:00","2024-08-14","2024-08-14 01:00:00"],"html":true,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"temp_F","name":"temp_F","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["69","70","70","70","71","72","72","72","71","71","70","70","69","69","70","70","70","69","68","67","67","67","68","69","70","71","72","73","74","74","75","75","75","74","73","72","71","71","71","72","72","72","72","72","73","74","75","76","77","78","80","81","82","82","80","79","78","78","77","77","78","78","78","78","78","77","77","76","76","76","76","77","78","79","80","81","82","83","83","82","81","79","77","76","75","74","73","72","71","70","69","68","68","68","69","71","74","77","79","80","81","82","82","81","80","78","76","75","74","73","72","71","70","69","68","68","68","68","69","71","74","77","79","81","82","82","82","81","80","78","76","75","74","73","72","71","70","69","68","68","68","68","69","71","74","77","79","81","82","83","83","82","81","79","77","76"],"html":true,"width":120,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"rain_prob","name":"rain_prob","type":"numeric","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["42","29","29","29","32","32","32","32","23","23","23","22","22","22","22","22","24","24","24","24","24","24","48","48","48","48","48","48","47","47","47","47","47","47","54","54","54","54","54","54","59","59","59","59","59","59","88","88","88","88","88","88","90","90","90","90","90","90","85","85","85","85","85","85","78","78","78","78","78","78","37","37","37","37","37","37","17","17","17","17","17","17","6","6","6","6","6","6","4","4","4","4","4","4","2","2","2","2","2","2","2","2","2","2","2","2","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","2","2","2","2","2","2","2","2","2","2","2","1","1","1","1","1","1","2","2","2","2","2","2","6","6","6","6","6","6","5","5"],"html":true,"width":120,"align":"right","headerStyle":{"font-weight":"normal"}},{"id":"forecast","name":"forecast","type":"character","style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\n}","cell":["Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Slight Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Chance Rain Showers","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms Likely","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Slight Chance Showers And Thunderstorms","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Mostly Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Mostly Clear","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Mostly Sunny","Partly Cloudy","Partly Cloudy","Partly Cloudy","Partly Cloudy"],"html":true,"align":"left","headerStyle":{"font-weight":"normal"}}],"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":true,"showPageInfo":true,"minRows":1,"showSortable":true,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"fontFamily":"system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"},"headerStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"}},"elementId":"kqumopgiyx","dataKey":"1bbe5d059edc8561540cfa0ac7a3d373"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style"],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -3264,18 +3254,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -3307,7 +3286,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/mortenlorenzen\.github\.io\/publish_quarto_ghpages\/");
@@ -3315,7 +3316,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

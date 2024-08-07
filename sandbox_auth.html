@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Run R code on GitHub - Sandbox R code with authorization</title>
+<title>Sandbox R code with authorization – Run R code on GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -149,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -174,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-note callout-titled" title="Last Update">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -184,7 +184,7 @@ Last Update
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This Quarto Website was generated on GitHub 2024-03-27 21:25:02.821849 at UTC time.</p>
+<p>This Quarto Website was generated on GitHub 2024-08-07 14:51:37.811562 at UTC time.</p>
 </div>
 </div>
 <p>The following code is focused on connecting R on GitHub to external data sources <strong>with authorization</strong>.</p>
@@ -255,24 +255,23 @@ Last Update
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_rds</span>(<span class="st">"test_rds_upload.rds"</span>) <span class="co"># read file</span></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>file <span class="sc">|&gt;</span> <span class="fu">gt</span>() <span class="co"># print my datatable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
-<div id="pskwytfkfc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pskwytfkfc table {
+<div id="vhlyfkjgzq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vhlyfkjgzq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pskwytfkfc thead, #pskwytfkfc tbody, #pskwytfkfc tfoot, #pskwytfkfc tr, #pskwytfkfc td, #pskwytfkfc th {
+#vhlyfkjgzq thead, #vhlyfkjgzq tbody, #vhlyfkjgzq tfoot, #vhlyfkjgzq tr, #vhlyfkjgzq td, #vhlyfkjgzq th {
   border-style: none;
 }
 
-#pskwytfkfc p {
+#vhlyfkjgzq p {
   margin: 0;
   padding: 0;
 }
 
-#pskwytfkfc .gt_table {
+#vhlyfkjgzq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -298,12 +297,12 @@ Last Update
   border-left-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_caption {
+#vhlyfkjgzq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pskwytfkfc .gt_title {
+#vhlyfkjgzq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -315,7 +314,7 @@ Last Update
   border-bottom-width: 0;
 }
 
-#pskwytfkfc .gt_subtitle {
+#vhlyfkjgzq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -327,7 +326,7 @@ Last Update
   border-top-width: 0;
 }
 
-#pskwytfkfc .gt_heading {
+#vhlyfkjgzq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -339,13 +338,13 @@ Last Update
   border-right-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_bottom_border {
+#vhlyfkjgzq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_col_headings {
+#vhlyfkjgzq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -360,7 +359,7 @@ Last Update
   border-right-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_col_heading {
+#vhlyfkjgzq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -380,7 +379,7 @@ Last Update
   overflow-x: hidden;
 }
 
-#pskwytfkfc .gt_column_spanner_outer {
+#vhlyfkjgzq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -392,15 +391,15 @@ Last Update
   padding-right: 4px;
 }
 
-#pskwytfkfc .gt_column_spanner_outer:first-child {
+#vhlyfkjgzq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pskwytfkfc .gt_column_spanner_outer:last-child {
+#vhlyfkjgzq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pskwytfkfc .gt_column_spanner {
+#vhlyfkjgzq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -412,11 +411,11 @@ Last Update
   width: 100%;
 }
 
-#pskwytfkfc .gt_spanner_row {
+#vhlyfkjgzq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pskwytfkfc .gt_group_heading {
+#vhlyfkjgzq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,7 +441,7 @@ Last Update
   text-align: left;
 }
 
-#pskwytfkfc .gt_empty_group_heading {
+#vhlyfkjgzq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -457,15 +456,15 @@ Last Update
   vertical-align: middle;
 }
 
-#pskwytfkfc .gt_from_md > :first-child {
+#vhlyfkjgzq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pskwytfkfc .gt_from_md > :last-child {
+#vhlyfkjgzq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pskwytfkfc .gt_row {
+#vhlyfkjgzq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -484,7 +483,7 @@ Last Update
   overflow-x: hidden;
 }
 
-#pskwytfkfc .gt_stub {
+#vhlyfkjgzq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -497,7 +496,7 @@ Last Update
   padding-right: 5px;
 }
 
-#pskwytfkfc .gt_stub_row_group {
+#vhlyfkjgzq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -511,15 +510,15 @@ Last Update
   vertical-align: top;
 }
 
-#pskwytfkfc .gt_row_group_first td {
+#vhlyfkjgzq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pskwytfkfc .gt_row_group_first th {
+#vhlyfkjgzq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pskwytfkfc .gt_summary_row {
+#vhlyfkjgzq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -529,16 +528,16 @@ Last Update
   padding-right: 5px;
 }
 
-#pskwytfkfc .gt_first_summary_row {
+#vhlyfkjgzq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_first_summary_row.thick {
+#vhlyfkjgzq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pskwytfkfc .gt_last_summary_row {
+#vhlyfkjgzq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -548,7 +547,7 @@ Last Update
   border-bottom-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_grand_summary_row {
+#vhlyfkjgzq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -558,7 +557,7 @@ Last Update
   padding-right: 5px;
 }
 
-#pskwytfkfc .gt_first_grand_summary_row {
+#vhlyfkjgzq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -568,7 +567,7 @@ Last Update
   border-top-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_last_grand_summary_row_top {
+#vhlyfkjgzq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -578,11 +577,11 @@ Last Update
   border-bottom-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_striped {
+#vhlyfkjgzq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pskwytfkfc .gt_table_body {
+#vhlyfkjgzq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -591,7 +590,7 @@ Last Update
   border-bottom-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_footnotes {
+#vhlyfkjgzq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -605,7 +604,7 @@ Last Update
   border-right-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_footnote {
+#vhlyfkjgzq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -614,7 +613,7 @@ Last Update
   padding-right: 5px;
 }
 
-#pskwytfkfc .gt_sourcenotes {
+#vhlyfkjgzq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -628,7 +627,7 @@ Last Update
   border-right-color: #D3D3D3;
 }
 
-#pskwytfkfc .gt_sourcenote {
+#vhlyfkjgzq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -636,68 +635,68 @@ Last Update
   padding-right: 5px;
 }
 
-#pskwytfkfc .gt_left {
+#vhlyfkjgzq .gt_left {
   text-align: left;
 }
 
-#pskwytfkfc .gt_center {
+#vhlyfkjgzq .gt_center {
   text-align: center;
 }
 
-#pskwytfkfc .gt_right {
+#vhlyfkjgzq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pskwytfkfc .gt_font_normal {
+#vhlyfkjgzq .gt_font_normal {
   font-weight: normal;
 }
 
-#pskwytfkfc .gt_font_bold {
+#vhlyfkjgzq .gt_font_bold {
   font-weight: bold;
 }
 
-#pskwytfkfc .gt_font_italic {
+#vhlyfkjgzq .gt_font_italic {
   font-style: italic;
 }
 
-#pskwytfkfc .gt_super {
+#vhlyfkjgzq .gt_super {
   font-size: 65%;
 }
 
-#pskwytfkfc .gt_footnote_marks {
+#vhlyfkjgzq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pskwytfkfc .gt_asterisk {
+#vhlyfkjgzq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pskwytfkfc .gt_indent_1 {
+#vhlyfkjgzq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pskwytfkfc .gt_indent_2 {
+#vhlyfkjgzq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pskwytfkfc .gt_indent_3 {
+#vhlyfkjgzq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pskwytfkfc .gt_indent_4 {
+#vhlyfkjgzq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pskwytfkfc .gt_indent_5 {
+#vhlyfkjgzq .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
 <th id="Date" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Date</th>
@@ -734,7 +733,6 @@ Last Update
 </tbody>
 </table>
 
-</div>
 </div>
 </div>
 </div>
@@ -816,18 +814,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -859,7 +846,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/mortenlorenzen\.github\.io\/publish_quarto_ghpages\/");
@@ -867,7 +876,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
