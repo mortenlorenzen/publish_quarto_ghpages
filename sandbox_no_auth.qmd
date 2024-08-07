@@ -2,10 +2,7 @@
 title: "Sandbox R code with no authorization"
 ---
 
-::: {.callout-note}
-
-## Last Update
-
+::: {.callout-note title="Last Update"}
 This Quarto Website was generated on GitHub `{r} Sys.time()` at `{r} Sys.timezone()` time.
 :::
 
@@ -16,15 +13,15 @@ I test R code to:
 
 1. Read a public shared `googlesheet` from Google Drive ✅ 
 1. Download and read a public shared .`xlsx` file from Google Drive ✅ 
-1. Write and upload a `.rds` file to Google Drive
 1. Download and read a public shared `.rds` file from Google Drive ✅ 
+1. Write and upload a `.rds` file to Google Drive
 1. Read data from an external API, Star Wars ✅ 
 1. Read data from an external API, Weather forecast ✅ 
 
 
 
 \
-Read a public shared `googlesheet` from Google Drive
+1.Read a public shared `googlesheet` from Google Drive
 ```{r}
 #| echo: true
 #| warning: false
@@ -43,7 +40,7 @@ datatable |> gt()                        # print my datatable
 
 
 \
-Download and read a public shared `.xlsx` file from Google Drive\
+2.Download and read a public shared `.xlsx` file from Google Drive\
 ```{r}
 #| echo: true
 #| warning: false
@@ -65,7 +62,7 @@ file |> gt() # print my datatable
 
 
 \
-Download and read a public shared `.rds` file from Google Drive
+3.Download and read a public shared `.rds` file from Google Drive
 ```{r}
 #| echo: true
 #| warning: false
@@ -101,7 +98,7 @@ file |> gt() # print my datatable
 
 
 \
-Write and upload a `.rds` file to Google Drive
+4.Write and upload a `.rds` file to Google Drive
 ```{r}
 #| echo: true
 #| warning: false
@@ -144,7 +141,7 @@ file |> gt() # print my datatable
 
 
 \
-Read data from an external API: [The Star Wars API](https://swapi.dev/)
+5.Read data from an external API: [The Star Wars API](https://swapi.dev/)
 ```{r}
 #| echo: true
 #| warning: false
@@ -166,7 +163,7 @@ name_people |> gt()
 
 
 \
-Read data from an external API, Weather forecast in NYC, API: [The National Weather Service (NWS)](https://api.weather.gov)
+6.Read data from an external API, Weather forecast in NYC, API: [The National Weather Service (NWS)](https://api.weather.gov)
 ```{r}
 #| echo: true
 #| warning: false

@@ -3,10 +3,7 @@ title: "Sandbox R code with authorization"
 ---
 
 
-::: {.callout-note}
-
-## Last Update
-
+::: {.callout-note title="Last Update"}
 This Quarto Website was generated on GitHub `{r} Sys.time()` at `{r} Sys.timezone()` time.
 :::
 
